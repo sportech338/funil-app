@@ -123,79 +123,71 @@ if section == "📘 Fundamentos":
 
 elif section == "🧠 Funil Mental":
 
-    tab1, tab2, tab3 = st.tabs([
-        "🧠 Mente do Público",
-        "🚨 Erro de Escala",
-        "📏 Régua & Relação"
-    ])
+    st.markdown("""
+<div class="card">
+<div class="title">🧠 Como a mente do público funciona</div>
 
-    with tab1:
-        st.markdown("""
-        <div class="card">
-        <div class="title">1️⃣ Como a mente do público funciona</div>
+<ul>
+<li>Desconhecimento</li>
+<li>Identificação do problema</li>
+<li>Comparação / ceticismo</li>
+<li>Confiança</li>
+<li>Decisão</li>
+</ul>
 
-        <ul>
-            <li>Desconhecimento</li>
-            <li>Identificação do problema</li>
-            <li>Comparação / ceticismo</li>
-            <li>Confiança</li>
-            <li>Decisão</li>
-        </ul>
+<p class="highlight">
+O Meta Ads só escala quando seus anúncios acompanham essa progressão.
+</p>
+</div>
+""", unsafe_allow_html=True)
 
-        <p class="highlight">
-            O Meta Ads só escala quando seus anúncios acompanham essa progressão.
-        </p>
-        </div>
-        """, unsafe_allow_html=True)
+    st.markdown("""
+<div class="card">
+<div class="title">🚨 O erro mais comum na escala</div>
 
-    with tab2:
-        st.markdown("""
-        <div class="card">
-        <div class="title">2️⃣ O erro mais comum na escala</div>
+<ul>
+<li>Público aberto</li>
+<li>Criativo de oferta</li>
+<li>“Compre agora”</li>
+<li>Aumenta orçamento</li>
+<li>ROAS cai</li>
+<li>CPM sobe</li>
+<li>Algoritmo perde sinal</li>
+</ul>
 
-        <ul>
-            <li>Público aberto</li>
-            <li>Criativo de oferta</li>
-            <li>“Compre agora”</li>
-            <li>Aumenta orçamento</li>
-            <li>ROAS cai</li>
-            <li>CPM sobe</li>
-            <li>Algoritmo perde sinal</li>
-        </ul>
+<p class="highlight">
+Isso acontece porque a mente ainda não está pronta.
+</p>
+</div>
+""", unsafe_allow_html=True)
 
-        <p class="highlight">
-            Isso acontece porque a mente ainda não está pronta.
-        </p>
-        </div>
-        """, unsafe_allow_html=True)
+    st.markdown("""
+<div class="card">
+<div class="title">📏 Régua de Consciência</div>
 
-    with tab3:
-        st.markdown("""
-        <div class="card">
-        <div class="title">📏 Régua de Consciência</div>
+<ul>
+<li>❓ Esse criativo pede decisão ou curiosidade?</li>
+<li>🧠 Ele explica o “por quê” ou apenas mostra que existe?</li>
+<li>⚠️ Ele aumenta ou reduz risco mental?</li>
+<li>⏱️ Quanto esforço cognitivo exige?</li>
+</ul>
 
-        <ul>
-            <li>❓ Esse criativo pede decisão ou curiosidade?</li>
-            <li>🧠 Ele explica o “por quê” ou apenas mostra que existe?</li>
-            <li>⚠️ Ele aumenta ou reduz risco mental?</li>
-            <li>⏱️ Quanto esforço cognitivo exige?</li>
-        </ul>
+<hr>
 
-        <hr>
+<div class="title">🔁 Relação entre as etapas</div>
 
-        <div class="title">🔁 Relação entre as etapas</div>
+<ul>
+<li><b>TOFU</b> desperta</li>
+<li><b>MOFU</b> organiza</li>
+<li><b>BOFU</b> confirma</li>
+</ul>
 
-        <ul>
-            <li><b>TOFU</b> desperta</li>
-            <li><b>MOFU</b> organiza</li>
-            <li><b>BOFU</b> confirma</li>
-        </ul>
+<p class="highlight">
+MOFU tira objeções. BOFU tira medo.
+</p>
+</div>
+""", unsafe_allow_html=True)
 
-        <p class="highlight">
-            MOFU tira objeções. BOFU tira medo.
-        </p>
-        </div>
-        """, unsafe_allow_html=True)
 
 # ======================================================
 # TOFU
