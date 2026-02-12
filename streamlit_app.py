@@ -120,7 +120,18 @@ if section == "📘 Fundamentos":
 
 elif section == "🧠 Funil Mental":
 
-    st.markdown("""
+    tab_base, tab_tofu, tab_mofu, tab_bofu = st.tabs([
+        "🧠 Fundamento Mental",
+        "🔵 TOFU",
+        "🟡 MOFU",
+        "🔴 BOFU"
+    ])
+
+    # ======================================================
+    # 🧠 FUNDAMENTO MENTAL
+    # ======================================================
+    with tab_base:
+        st.markdown("""
 <div class="card">
 <div class="title">🧠 Funil Mental — Progressão Psicológica</div>
 
@@ -138,7 +149,7 @@ O Meta Ads só escala quando seus anúncios acompanham essa progressão.
 </div>
 """, unsafe_allow_html=True)
 
-    st.markdown("""
+        st.markdown("""
 <div class="card">
 <div class="title">🚨 O erro mais comum na escala</div>
 
@@ -158,7 +169,7 @@ Isso acontece porque a mente ainda não está pronta.
 </div>
 """, unsafe_allow_html=True)
 
-    st.markdown("""
+        st.markdown("""
 <div class="card">
 <div class="title">📏 Régua de Consciência</div>
 
@@ -184,15 +195,6 @@ MOFU tira objeções. BOFU tira medo.
 </p>
 </div>
 """, unsafe_allow_html=True)
-
-    # ======================================================
-    # ABAS DO FUNIL
-    # ======================================================
-    tab_tofu, tab_mofu, tab_bofu = st.tabs([
-        "🔵 TOFU",
-        "🟡 MOFU",
-        "🔴 BOFU"
-    ])
 
     # ======================================================
     # 🔵 TOFU
@@ -246,28 +248,6 @@ MOFU tira objeções. BOFU tira medo.
 </div>
 """, unsafe_allow_html=True)
 
-        st.markdown("### 🧠 Diagnóstico Mental — TOFU")
-
-        checks = [
-            "O criativo NÃO pede compra",
-            "O produto aparece como parte da rotina",
-            "Não existe oferta, desconto ou urgência",
-            "O CTA é leve (Saiba mais)",
-            "O criativo gera curiosidade, não decisão",
-        ]
-
-        score = 0
-        for c in checks:
-            if st.checkbox(c, key=f"tofu_{c}"):
-                score += 1
-
-        if score == len(checks):
-            st.success("✅ TOFU PURO — pronto para escalar.")
-        elif score >= 3:
-            st.warning("⚠️ TOFU contaminado. Cuidado ao escalar.")
-        else:
-            st.error("❌ Isso NÃO é TOFU. É BOFU disfarçado.")
-
     # ======================================================
     # 🟡 MOFU
     # ======================================================
@@ -305,30 +285,12 @@ MOFU tira objeções. BOFU tira medo.
 <p class="highlight">
 “MOFU existe para explicar o que o público já começou a suspeitar.”
 </p>
+
+<p class="muted">
+Se o MOFU estiver fraco, o BOFU fica caro.
+</p>
 </div>
 """, unsafe_allow_html=True)
-
-        st.markdown("### 🧠 Diagnóstico Mental — MOFU")
-
-        checks = [
-            "O criativo explica o porquê da solução",
-            "Existe lógica ou mecanismo claro",
-            "Reduz medo ou ceticismo",
-            "Não força compra direta",
-            "Prepara o público para decidir depois",
-        ]
-
-        score = 0
-        for c in checks:
-            if st.checkbox(c, key=f"mofu_{c}"):
-                score += 1
-
-        if score == len(checks):
-            st.success("✅ MOFU forte — BOFU tende a ficar barato.")
-        elif score >= 3:
-            st.warning("⚠️ MOFU razoável — atenção no BOFU.")
-        else:
-            st.error("❌ MOFU fraco — BOFU VAI ficar caro.")
 
     # ======================================================
     # 🔴 BOFU
@@ -377,30 +339,12 @@ MOFU tira objeções. BOFU tira medo.
 <p class="highlight">
 “BOFU não empurra a venda. Ele dá segurança para decidir.”
 </p>
+
+<p class="muted">
+Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
+</p>
 </div>
 """, unsafe_allow_html=True)
-
-        st.markdown("### 🧠 Diagnóstico Mental — BOFU")
-
-        checks = [
-            "A oferta está clara",
-            "Existe prova social real",
-            "O benefício principal está explícito",
-            "O CTA é direto e coerente",
-            "O criativo transmite segurança",
-        ]
-
-        score = 0
-        for c in checks:
-            if st.checkbox(c, key=f"bofu_{c}"):
-                score += 1
-
-        if score == len(checks):
-            st.success("✅ BOFU pronto para converter.")
-        elif score >= 3:
-            st.warning("⚠️ BOFU ok, mas pode melhorar.")
-        else:
-            st.error("❌ BOFU fraco — o problema pode estar no MOFU.")
 
 
 # ======================================================
