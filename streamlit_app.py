@@ -74,7 +74,7 @@ section = st.sidebar.radio(
     [
         "📘 Fundamentos",
         "🌪️ Fluxo do Funil",
-        "🔢 Criativos",
+        "🎥 Criativos",
         "🔥 Resumo Final",
     ]
 )
@@ -362,13 +362,13 @@ Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
 # ======================================================
 # CRIATIVOS
 # ======================================================
-elif section == "🔢 Criativos":
+elif section == "🎥 Criativos":
 
     # 🔒 APENAS A DESCRIÇÃO FICA FECHADA
-    with st.expander("🔢 31 Criativos — Organizados por Função Mental", expanded=False):
+    with st.expander("🎥 31 Criativos — Organizados por Função Mental", expanded=False):
         st.markdown("""
 <div class="card">
-<div class="title">🔢 31 Criativos — Organizados por Função Mental</div>
+<div class="title">🎥 31 Criativos — Organizados por Função Mental</div>
 
 <p class="muted">
 Esta seção transforma o manual em execução.<br>
