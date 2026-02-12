@@ -156,11 +156,30 @@ st.markdown("""
 <div class="title">3️⃣ Régua de Consciência</div>
 
 <ul>
-<li>❓ Pede decisão ou curiosidade?</li>
-<li>🧠 Explica o “por quê” ou só mostra que existe?</li>
-<li>⚠️ Aumenta ou reduz risco mental?</li>
+<li>❓ Esse criativo pede decisão ou curiosidade?</li>
+<li>🧠 Ele explica o “por quê” ou apenas mostra que existe?</li>
+<li>⚠️ Ele aumenta ou reduz risco mental?</li>
 <li>⏱️ Quanto esforço cognitivo exige?</li>
 </ul>
+</div>
+""", unsafe_allow_html=True)
+
+# ======================================================
+# RELAÇÃO ENTRE AS ETAPAS
+# ======================================================
+st.markdown("""
+<div class="card">
+<div class="title">🔁 Relação entre as etapas</div>
+
+<ul>
+<li><b>TOFU</b> desperta</li>
+<li><b>MOFU</b> organiza</li>
+<li><b>BOFU</b> confirma</li>
+</ul>
+
+<p class="highlight">
+MOFU tira objeções. BOFU tira medo.
+</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -177,7 +196,7 @@ with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)", expanded=True):
 </div>
 
 <ul>
-<li>Apresentação simples</li>
+<li>Apresentação simples do produto</li>
 <li>Produto aparece sem explicação</li>
 <li>Zero argumento de venda</li>
 </ul>
@@ -190,7 +209,7 @@ with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)", expanded=True):
 <ul>
 <li>Rotina real</li>
 <li>Dor silenciosa</li>
-<li>Produto como detalhe</li>
+<li>Usuário se enxerga no cenário</li>
 </ul>
 
 <div class="micro tofu">
@@ -199,9 +218,9 @@ with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)", expanded=True):
 </div>
 
 <ul>
-<li>Uso rápido</li>
-<li>Close sutil</li>
-<li>“Eu comecei a usar por causa disso…”</li>
+<li>Uso rápido no dia a dia</li>
+<li>Close sutil do produto</li>
+<li>Produto resolve sem ser protagonista</li>
 </ul>
 
 <b>CTA:</b> <span class="highlight">Saiba mais</span>
@@ -209,6 +228,21 @@ with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)", expanded=True):
 <hr>
 
 <b>Métricas:</b> ThruPlay · 50% vídeo · CPM saudável
+
+<hr>
+
+<b>Papel do TOFU na escala:</b>
+<ul>
+<li>Gera públicos quentes</li>
+<li>Cria curiosos compradores</li>
+<li>Planta dúvida nos céticos</li>
+<li>Alimenta MOFU e BOFU</li>
+<li>Mantém CPM baixo</li>
+</ul>
+
+<p class="highlight">
+“No TOFU, o produto aparece como parte da rotina, não como argumento de venda.”
+</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -220,14 +254,15 @@ with st.expander("🟡 ETAPA 2 — MOFU (Educação + Justificação)"):
 <div class="card">
 
 <div class="micro mofu">
-<div class="micro-title">🟡 MOFU — EDUCAÇÃO</div>
+<div class="micro-title">🟡 MOFU — EDUCAÇÃO (Base)</div>
 <div class="micro-desc">Organiza o raciocínio · reduz ceticismo</div>
 </div>
 
 <ul>
 <li>Educacional</li>
 <li>Mecanismo</li>
-<li>Comparação lógica</li>
+<li>Comparação</li>
+<li>Demonstração parcial</li>
 </ul>
 
 <div class="micro mofu">
@@ -246,6 +281,24 @@ with st.expander("🟡 ETAPA 2 — MOFU (Educação + Justificação)"):
 <hr>
 
 <b>Métricas:</b> 50–75% vídeo · CTR · Tempo médio
+
+<hr>
+
+<b>Papel do MOFU na escala:</b>
+<ul>
+<li>Transforma curiosos em interessados</li>
+<li>Filtra compradores reais</li>
+<li>Reduz objeções no checkout</li>
+<li>Prepara BOFU para converter barato</li>
+</ul>
+
+<p class="highlight">
+“MOFU existe para explicar o que o público já começou a suspeitar.”
+</p>
+
+<p class="muted">
+Se o MOFU estiver fraco, o BOFU fica caro.
+</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -294,6 +347,23 @@ with st.expander("🔴 ETAPA 3 — BOFU (Decisão + Conversão)"):
 <hr>
 
 <b>Métricas:</b> CPA · ROAS · Conversão
+
+<hr>
+
+<b>Papel do BOFU na escala:</b>
+<ul>
+<li>Protege margem</li>
+<li>Estabiliza ROAS</li>
+<li>Valida o funil inteiro</li>
+</ul>
+
+<p class="highlight">
+“BOFU não empurra a venda. Ele dá segurança para decidir.”
+</p>
+
+<p class="muted">
+Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
+</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -302,16 +372,17 @@ with st.expander("🔴 ETAPA 3 — BOFU (Decisão + Conversão)"):
 # ======================================================
 st.markdown("""
 <div class="card">
-<div class="title">🔥 Resumo Final</div>
+<div class="title">🔥 Resumo Final — Mente do Público</div>
 
 <ul>
-<li><b>TOFU:</b> Isso existe?</li>
-<li><b>MOFU:</b> Isso faz sentido?</li>
-<li><b>BOFU:</b> Posso confiar?</li>
+<li><b>TOFU:</b> “Isso existe?”</li>
+<li><b>MOFU:</b> “Isso faz sentido?”</li>
+<li><b>BOFU:</b> “Posso confiar?”</li>
 </ul>
 
 <p class="highlight">
-Quando o anúncio respeita a mente, a escala vira consequência.
+Quando seus anúncios seguem esse raciocínio,
+a escala deixa de ser tentativa e vira consequência.
 </p>
 </div>
 """, unsafe_allow_html=True)
