@@ -121,23 +121,79 @@ if section == "📘 Fundamentos":
 elif section == "🧠 Funil":
     st.markdown("## 🧠 Funil — Estrutura Mental")
 
-    st.markdown("""
-    <div class="card">
-    <div class="title">1️⃣ Como a mente do público funciona</div>
+    tab1, tab2, tab3 = st.tabs([
+        "🧠 Mente do Público",
+        "🚨 Erro de Escala",
+        "📏 Régua & Relação"
+    ])
 
-    <ul>
-        <li>Desconhecimento</li>
-        <li>Identificação do problema</li>
-        <li>Comparação / ceticismo</li>
-        <li>Confiança</li>
-        <li>Decisão</li>
-    </ul>
+    with tab1:
+        st.markdown("""
+        <div class="card">
+        <div class="title">1️⃣ Como a mente do público funciona</div>
 
-    <p class="highlight">
-        O Meta Ads só escala quando seus anúncios acompanham essa progressão.
-    </p>
-    </div>
-    """, unsafe_allow_html=True)
+        <ul>
+            <li>Desconhecimento</li>
+            <li>Identificação do problema</li>
+            <li>Comparação / ceticismo</li>
+            <li>Confiança</li>
+            <li>Decisão</li>
+        </ul>
+
+        <p class="highlight">
+            O Meta Ads só escala quando seus anúncios acompanham essa progressão.
+        </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with tab2:
+        st.markdown("""
+        <div class="card">
+        <div class="title">2️⃣ O erro mais comum na escala</div>
+
+        <ul>
+            <li>Público aberto</li>
+            <li>Criativo de oferta</li>
+            <li>“Compre agora”</li>
+            <li>Aumenta orçamento</li>
+            <li>ROAS cai</li>
+            <li>CPM sobe</li>
+            <li>Algoritmo perde sinal</li>
+        </ul>
+
+        <p class="highlight">
+            Isso acontece porque a mente ainda não está pronta.
+        </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with tab3:
+        st.markdown("""
+        <div class="card">
+        <div class="title">📏 Régua de Consciência</div>
+
+        <ul>
+            <li>❓ Esse criativo pede decisão ou curiosidade?</li>
+            <li>🧠 Ele explica o “por quê” ou apenas mostra que existe?</li>
+            <li>⚠️ Ele aumenta ou reduz risco mental?</li>
+            <li>⏱️ Quanto esforço cognitivo exige?</li>
+        </ul>
+
+        <hr>
+
+        <div class="title">🔁 Relação entre as etapas</div>
+
+        <ul>
+            <li><b>TOFU</b> desperta</li>
+            <li><b>MOFU</b> organiza</li>
+            <li><b>BOFU</b> confirma</li>
+        </ul>
+
+        <p class="highlight">
+            MOFU tira objeções. BOFU tira medo.
+        </p>
+        </div>
+        """, unsafe_allow_html=True)
 
 
 
