@@ -11,16 +11,14 @@ O fluxo de escala só funciona quando replica o processo mental real do público
 - abrir LAL aleatório  
 
 ### Escala é:
-**Ampliar algo que já está coerente com a mente do comprador.**
+**ampliar algo que já está coerente com a mente do comprador.**
 """)
-
-st.divider()
 
 st.subheader("⏱️ Timing mental")
 st.markdown("""
-- **TOFU** leve e escalável  
-- **MOFU** lógico e educativo  
-- **BOFU** forte, sem contaminar o funil  
+- TOFU → leve e escalável  
+- MOFU → lógico e educativo  
+- BOFU → forte, sem contaminar o funil  
 """)
 
 st.success("👉 Isso é tráfego de escala, não de tentativa.")
