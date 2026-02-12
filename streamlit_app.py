@@ -657,62 +657,138 @@ Se o MOFU estiver fraco, o BOFU fica caro.
 # 🔴 BOFU
 # ======================================================
 elif section == "🔴 BOFU":
-    tab1, tab2 = st.tabs(["📌 Resumo (rápido)", "🧱 Estrutura (modelo)"])
 
+    # ---------- RESUMO FIXO (sempre visível) ----------
+    st.markdown("""
+<div class="card bofu">
+<div class="title">🔴 BOFU — Decisão & Conversão</div>
+
+<b>Função mental:</b><br>
+“Eu já entendi. Agora só não quero errar.”
+
+<hr>
+
+<b>Objetivo:</b><br>
+Dar segurança e facilitar a decisão.
+
+<hr>
+
+<b>CTA:</b> Comprar agora / Garantir o seu<br>
+<b>Métricas:</b> CPA · ROAS · Taxa de conversão
+
+<hr>
+
+<span class="highlight">
+BOFU não convence. Ele confirma.
+</span>
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- ABAS INTERNAS ----------
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "🧠 Essência",
+        "🧱 Estrutura",
+        "🎬 Criativos",
+        "🚫 Erros & Papel"
+    ])
+
+    # ---------- ESSÊNCIA ----------
     with tab1:
-        card_stage(
-            stage_name="🔴 BOFU — Decisão + conversão",
-            stage_class="bofu",
-            o_que_e="BOFU não é persuasão. BOFU é confirmação (remove o último freio).",
-            funcao_mental="“Eu já entendi. Agora só não quero errar.”",
-            objetivo_real="Facilitar a decisão reduzindo risco percebido, medo de arrependimento, dúvida de qualidade e insegurança pós-compra.",
-            formato="Vídeos de 15 a 40s (curto, direto).",
-            estrutura=[
-                "Confirmação do problema",
-                "Prova real (pessoas, uso, resultado)",
-                "Validação social ou técnica",
-                "Oferta clara",
-                "CTA de ação",
-            ],
-            cta="“Comprar agora” / “Garantir o seu”",
-            tipos=[
-                "Prova social: depoimentos, UGC, prints (quando permitido)",
-                "Antes/depois (funcional, não estético): movimento vs limitação; segurança vs instabilidade",
-                "Confiança/autoridade: material, engenharia, diferenciais, bastidores/testes",
-                "Oferta estruturada: benefício principal, o que inclui, para quem é/não é, condição sem gritar preço",
-                "Escassez legítima: lote, prazo real, bônus por tempo, demanda limitada (sem escassez falsa)",
-            ],
-            metricas=["CPA", "ROAS", "Taxa de conversão", "Ticket médio"],
-            papel=[
-                "Converte público preparado",
-                "Protege margem",
-                "Estabiliza ROAS",
-                "Valida o funil inteiro",
-            ],
-            erros=[
-                "Educar no BOFU (tarde demais)",
-                "Explicar mecanismo (MOFU falhou)",
-                "Escassez falsa (destrói confiança)",
-            ],
-            frase="BOFU não empurra a venda. Ele dá segurança para decidir.",
-        )
+        st.markdown("""
+<div class="card">
+<b>O que é:</b><br>
+BOFU não é persuasão.<br>
+BOFU remove o último freio mental.
 
+<hr>
+
+<b>Estágio mental:</b><br>
+Neste ponto, o usuário:
+<ul>
+<li>Já aceita o problema</li>
+<li>Já acredita na solução</li>
+<li>Já entende o mecanismo</li>
+<li>Tem medo apenas da escolha</li>
+</ul>
+
+<hr>
+
+<b>Papel central:</b><br>
+Reduzir risco percebido — não explicar.
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- ESTRUTURA ----------
     with tab2:
         st.markdown("""
 <div class="card">
-<div class="title">🧱 Modelo BOFU (sem enrolação)</div>
-<div class="muted">
-<b>Checklist BOFU:</b>
-<ul>
-<li>Usuário já entende? (se não, você está cedo)</li>
-<li>Tem prova real?</li>
-<li>Oferta clara em 1 frase?</li>
-<li>Garantia / redução de risco?</li>
-<li>CTA direto?</li>
-</ul>
-</div>
+<b>Formato ideal:</b><br>
+Vídeos de 15 a 40 segundos (curto e direto)
+
 <hr>
-<span class="highlight">Meta: eficiência (não volume).</span>
+
+<b>Estrutura mental correta:</b>
+<ol>
+<li>Confirmação do problema</li>
+<li>Prova real (pessoas, uso, resultado)</li>
+<li>Validação social ou técnica</li>
+<li>Oferta clara</li>
+<li>CTA de ação</li>
+</ol>
+
+<hr>
+
+<span class="highlight">
+Meta: eficiência (não volume).
+</span>
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- CRIATIVOS ----------
+    with tab3:
+        st.markdown("""
+<div class="card">
+<b>Tipos de criativo BOFU:</b>
+
+<ul>
+<li><b>Prova social:</b> depoimentos, UGC, prints (quando permitido)</li>
+<li><b>Antes / Depois:</b> funcional, não estético<br>
+<small>Movimento × limitação · segurança × instabilidade</small></li>
+<li><b>Confiança & autoridade:</b> material, engenharia, diferenciais, bastidores</li>
+<li><b>Oferta estruturada:</b> benefício principal, o que inclui, para quem é / não é</li>
+<li><b>Escassez legítima:</b> lote, prazo real, bônus por tempo, demanda limitada</li>
+</ul>
+
+<p class="muted">
+📌 Escassez falsa destrói BOFU.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- ERROS & PAPEL ----------
+    with tab4:
+        st.markdown("""
+<div class="card">
+<b>Erros comuns:</b>
+<ul>
+<li>Educar no BOFU (tarde demais)</li>
+<li>Explicar mecanismo (MOFU falhou)</li>
+<li>Escassez falsa ou forçada</li>
+</ul>
+
+<hr>
+
+<b>Papel do BOFU na escala:</b>
+<ul>
+<li>Converte público já preparado</li>
+<li>Protege margem</li>
+<li>Estabiliza ROAS</li>
+<li>Valida o funil inteiro</li>
+</ul>
+
+<p class="muted">
+Se o BOFU estiver caro, o problema está antes.
+</p>
 </div>
 """, unsafe_allow_html=True)
 
