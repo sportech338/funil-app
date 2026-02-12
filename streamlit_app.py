@@ -350,10 +350,14 @@ Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
 # ======================================================
 # CRIATIVOS — EXECUÇÃO
 # ======================================================
+# ======================================================
+# CRIATIVOS — EXECUÇÃO
+# ======================================================
 elif section == "🔢 Criativos — Execução":
 
-with st.expander("🔢 Criativos — Execução (abrir para ver)", expanded=False):
-    st.markdown("""
+    with st.expander("🔢 Criativos — Execução (abrir para ver)", expanded=False):
+
+        st.markdown("""
 <div class="card">
 <div class="title">🔢 31 Criativos — Organizados por Função Mental</div>
 
@@ -364,19 +368,18 @@ Aqui, cada criativo existe por um <b>motivo mental específico</b>.
 </div>
 """, unsafe_allow_html=True)
 
+        # ===== ABAS =====
+        tab_tofu, tab_mofu, tab_bofu = st.tabs([
+            "🔵 TOFU",
+            "🟡 MOFU",
+            "🔴 BOFU"
+        ])
 
-    # ===== ABAS =====
-    tab_tofu, tab_mofu, tab_bofu = st.tabs([
-        "🔵 TOFU",
-        "🟡 MOFU",
-        "🔴 BOFU"
-    ])
-
-    # ======================================================
-    # 🔵 TOFU
-    # ======================================================
-    with tab_tofu:
-        st.markdown("""
+        # ======================================================
+        # 🔵 TOFU
+        # ======================================================
+        with tab_tofu:
+            st.markdown("""
 <div class="card">
 <div class="micro tofu">
 <div class="micro-title">🔵 TOFU | FLEXLIVE — 10 Criativos</div>
@@ -428,11 +431,11 @@ Aqui, cada criativo existe por um <b>motivo mental específico</b>.
 </div>
 """, unsafe_allow_html=True)
 
-    # ======================================================
-    # 🟡 MOFU
-    # ======================================================
-    with tab_mofu:
-        st.markdown("""
+        # ======================================================
+        # 🟡 MOFU
+        # ======================================================
+        with tab_mofu:
+            st.markdown("""
 <div class="card">
 <div class="micro mofu">
 <div class="micro-title">🟡 MOFU | FLEXLIVE — 12 Criativos</div>
@@ -486,11 +489,11 @@ Aqui, cada criativo existe por um <b>motivo mental específico</b>.
 </div>
 """, unsafe_allow_html=True)
 
-    # ======================================================
-    # 🔴 BOFU
-    # ======================================================
-    with tab_bofu:
-        st.markdown("""
+        # ======================================================
+        # 🔴 BOFU
+        # ======================================================
+        with tab_bofu:
+            st.markdown("""
 <div class="card">
 <div class="micro bofu">
 <div class="micro-title">🔴 BOFU | FLEXLIVE — 9 Criativos</div>
