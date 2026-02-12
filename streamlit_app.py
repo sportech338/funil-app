@@ -568,11 +568,11 @@ Aqui, cada criativo existe por um <b>motivo mental específico</b>.
 """, unsafe_allow_html=True)
 
 
-elif section == "🔥 Resumo Final":
+elif section == "📊 Diagnóstico":
     st.markdown("""
 
 <div class="card">
-<div class="title">🔥 Resumo Final — Mente do Público</div>
+<div class="title">📊 Diagnóstico — Mente do Público</div>
 
 <ul>
 <li><b>TOFU:</b> “Isso existe?”</li>
@@ -587,7 +587,7 @@ a escala deixa de ser tentativa e vira consequência.
 </div>
 """, unsafe_allow_html=True)
 
-    st.markdown("### 🎯 Diagnóstico Final do Funil")
+    st.markdown("### 🎯 Análise do Funil")
 
     tofu_ok = st.checkbox("Meu TOFU gera curiosidade sem vender")
     mofu_ok = st.checkbox("Meu MOFU educa e reduz objeções")
