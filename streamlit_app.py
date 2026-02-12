@@ -730,18 +730,3 @@ Criativo ruim drena o funil inteiro.
 </p>
 </div>
 """, unsafe_allow_html=True)
-
-    st.markdown("### 🎯 Análise do Funil")
-
-    tofu_ok = st.checkbox("Meu TOFU gera curiosidade sem vender")
-    mofu_ok = st.checkbox("Meu MOFU educa e reduz objeções")
-    bofu_ok = st.checkbox("Meu BOFU transmite segurança para decidir")
-
-    if tofu_ok and mofu_ok and bofu_ok:
-        st.success("🚀 Funil mentalmente alinhado. Escalar agora é seguro.")
-    elif not tofu_ok:
-        st.error("❌ O problema começa no TOFU. Não escale ainda.")
-    elif not mofu_ok:
-        st.warning("⚠️ MOFU fraco. BOFU vai ficar caro.")
-    else:
-        st.info("🔎 BOFU precisa de ajustes finos.")
