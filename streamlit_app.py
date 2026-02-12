@@ -1,6 +1,4 @@
 import streamlit as st
-from dataclasses import dataclass
-from typing import Dict, List, Tuple
 
 st.set_page_config(
     page_title="Manual Mental de Funil de Vendas",
@@ -8,232 +6,275 @@ st.set_page_config(
 )
 
 # ==================================================
-# FUNÇÕES UTILITÁRIAS (LÓGICA)
+# ESTILO
 # ==================================================
-def clamp(n: int, lo: int, hi: int) -> int:
-    return max(lo, min(hi, n))
-
-def score_label(score: int) -> str:
-    if score >= 80:
-        return "Excelente"
-    if score >= 60:
-        return "Bom"
-    if score >= 40:
-        return "Atenção"
-    return "Crítico"
-
-def detectar_estagio(pede_decisao, explica, reduz_risco, esforco, cta):
-    if pede_decisao or cta in ["Comprar agora", "Garantir o seu"]:
-        return "BOFU"
-    if explica or reduz_risco or esforco >= 3:
-        return "MOFU"
-    return "TOFU"
-
-def risco_contaminacao(pede_decisao, esforco, cta):
-    risco = 0
-    if pede_decisao:
-        risco += 40
-    if cta in ["Comprar agora", "Garantir o seu"]:
-        risco += 35
-    if esforco >= 4:
-        risco += 25
-    return clamp(risco, 0, 100)
-
-def coerencia_mental(planejado, detectado, risco):
-    score = 100
-    if planejado != detectado:
-        score -= 35
-    score -= int(risco * 0.3)
-    return clamp(score, 0, 100)
-
-def decisao_funil(planejado, detectado, risco):
-    if planejado == detectado and risco <= 35:
-        return "Escalar", "Criativo coerente com o estágio mental do público."
-    if planejado == "TOFU" and detectado != "TOFU":
-        return "Consertar", "Você está exigindo demais para um primeiro contato."
-    if planejado == "MOFU" and detectado == "BOFU":
-        return "Ajustar", "Está pedindo decisão antes de organizar o raciocínio."
-    if planejado == "BOFU" and detectado != "BOFU":
-        return "Ajustar", "Está fraco para decisão. Falta segurança."
-    return "Ajustar", "Criativo desalinhado com o timing mental."
+st.markdown("""
+<style>
+.block {
+    padding: 1.8rem;
+    border-radius: 14px;
+    background: #0e1117;
+    border: 1px solid #1f2933;
+    margin-bottom: 1.6rem;
+}
+.small {
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+.highlight {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    padding: 0.35rem 0.7rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ==================================================
-# MODELOS DE DADOS
-# ==================================================
-@dataclass
-class Creative:
-    nome: str
-    estagio_planejado: str
-    cta: str
-    pede_decisao: bool
-    explica: bool
-    reduz_risco: bool
-    esforco: int
-    obs: str = ""
-
-# ==================================================
-# ESTADO
-# ==================================================
-if "pagina" not in st.session_state:
-    st.session_state.pagina = "Guia"
-if "criativos" not in st.session_state:
-    st.session_state.criativos: List[Creative] = []
-
-# ==================================================
-# CABEÇALHO
+# HEADER
 # ==================================================
 st.title("🧠 Manual Mental de Funil de Vendas")
-st.caption("Este app ensina como construir, analisar e escalar um funil de vendas baseado na mente real do comprador.")
+st.caption("Um guia prático para entender como a mente do público funciona antes da compra — e como escalar sem quebrar o funil.")
+
+st.divider()
 
 # ==================================================
-# NAVEGAÇÃO
+# PRINCÍPIO CENTRAL
 # ==================================================
-st.session_state.pagina = st.radio(
-    "Escolha o que deseja aprender ou analisar:",
-    ["Guia", "O que é TOFU, MOFU e BOFU", "Classificar Criativo", "Biblioteca", "Diagnóstico"],
-    horizontal=True
-)
+st.markdown("## 🧠 Princípio Central")
 
-# ==================================================
-# GUIA – AULA BASE
-# ==================================================
-if st.session_state.pagina == "Guia":
-    st.subheader("📘 Aula 1 — O que é um funil de vendas de verdade")
+st.markdown("""
+<div class="block">
+O fluxo de escala só funciona quando replica o processo mental real do público-alvo.
 
-    st.markdown("""
-    Um funil de vendas não é uma estrutura de campanhas.  
-    Um funil de vendas é uma **sequência de estados mentais**.
+Escala não é aumentar orçamento.  
+Escala não é duplicar conjunto.  
+Escala não é abrir LAL aleatório.
 
-    Antes de comprar, toda pessoa passa por cinco momentos:
-    desconhecimento, identificação do problema, dúvida, confiança e decisão.
+<br>
 
-    O erro mais comum no tráfego pago é **tentar pular etapas**.
-    """)
+<strong>Escala é ampliar algo que já está coerente com a mente do comprador.</strong>
+</div>
+""", unsafe_allow_html=True)
 
-    st.warning("""
-    Escalar não é:
-    aumentar orçamento  
-    duplicar conjunto  
-    abrir público parecido  
+st.markdown("""
+<div class="block">
+O fator mais importante da escala é o <span class="highlight">timing mental</span>.
 
-    Escalar é ampliar algo que já está coerente com a mente do comprador.
-    """)
+TOFU precisa ser leve e escalável.  
+MOFU precisa ser lógico e educativo.  
+BOFU precisa ser forte, sem contaminar o funil.
 
-    st.success("""
-    Quando seus anúncios respeitam o timing mental, a escala vira consequência.
-    """)
+<br><br>
+👉 Isso é tráfego de escala. Não é tráfego de tentativa.
+</div>
+""", unsafe_allow_html=True)
 
 # ==================================================
-# AULA TOFU / MOFU / BOFU
+# COMO A MENTE FUNCIONA
 # ==================================================
-elif st.session_state.pagina == "O que é TOFU, MOFU e BOFU":
-    st.subheader("📘 Aula 2 — TOFU, MOFU e BOFU explicados")
+st.markdown("## 🧠 Como a Mente do Público Funciona (Realidade)")
 
-    tab1, tab2, tab3 = st.tabs(["TOFU", "MOFU", "BOFU"])
+st.markdown("""
+<div class="block">
+Antes de comprar, a pessoa não passa por funis bonitos no PowerPoint.
 
-    with tab1:
-        st.markdown("""
-        TOFU é o primeiro contato.
+Ela passa por <strong>estágios mentais reais</strong>:
 
-        O público ainda não quer comprar.
-        Ele só quer entender se aquilo existe e se pode ser relevante.
+Desconhecimento  
+Identificação do problema  
+Comparação e ceticismo  
+Confiança  
+Decisão
 
-        O erro no TOFU é pedir decisão cedo demais.
-        """)
-
-        st.info("No TOFU, o produto aparece como parte da rotina, não como argumento de venda.")
-
-    with tab2:
-        st.markdown("""
-        MOFU é organização mental.
-
-        Aqui o público já está curioso, mas desconfiado.
-        Ele quer lógica, comparação e explicação.
-
-        MOFU não vende. MOFU faz sentido.
-        """)
-
-        st.info("MOFU existe para explicar o que o público já começou a suspeitar.")
-
-    with tab3:
-        st.markdown("""
-        BOFU é decisão.
-
-        A pessoa já entendeu tudo.
-        O único medo agora é errar na escolha.
-
-        BOFU não convence. BOFU confirma.
-        """)
-
-        st.info("BOFU não empurra a venda. Ele dá segurança para decidir.")
+<br><br>
+👉 O Meta Ads só escala quando os anúncios acompanham essa progressão.
+</div>
+""", unsafe_allow_html=True)
 
 # ==================================================
-# CLASSIFICADOR
+# ERRO DE ESCALA
 # ==================================================
-elif st.session_state.pagina == "Classificar Criativo":
-    st.subheader("🧪 Classificador Mental de Criativos")
+st.markdown("## 🚨 O Erro Mais Comum na Escala")
 
-    nome = st.text_input("Nome do criativo")
-    planejado = st.selectbox("Função planejada no funil", ["TOFU", "MOFU", "BOFU"])
-    cta = st.selectbox("CTA", ["Saiba mais", "Entenda como funciona", "Comprar agora", "Garantir o seu"])
-    pede_decisao = st.toggle("Pede decisão?")
-    explica = st.toggle("Explica o porquê?")
-    reduz_risco = st.toggle("Reduz risco mental?")
-    esforco = st.slider("Esforço cognitivo", 1, 5)
+st.markdown("""
+<div class="block">
+Tentar escalar BOFU direto para público frio.
 
-    if nome:
-        detectado = detectar_estagio(pede_decisao, explica, reduz_risco, esforco, cta)
-        risco = risco_contaminacao(pede_decisao, esforco, cta)
-        score = coerencia_mental(planejado, detectado, risco)
-        acao, motivo = decisao_funil(planejado, detectado, risco)
+O cenário costuma ser sempre o mesmo:
 
-        st.metric("Estágio detectado", detectado)
-        st.metric("Risco mental", f"{risco}%")
-        st.progress(score / 100)
-        st.write(f"Coerência: {score}/100 — {score_label(score)}")
+Público aberto  
+Criativo de oferta  
+“Compre agora”  
+Aumenta orçamento  
 
-        if acao == "Escalar":
-            st.success(motivo)
-        else:
-            st.warning(motivo)
+<br>
 
-        if st.button("Salvar criativo"):
-            st.session_state.criativos.append(
-                Creative(nome, planejado, cta, pede_decisao, explica, reduz_risco, esforco)
-            )
-            st.success("Criativo salvo.")
+O resultado também é previsível:
+
+ROAS cai  
+CPM sobe  
+Algoritmo perde sinal  
+
+<br>
+👉 Isso acontece porque a mente ainda não está pronta.
+</div>
+""", unsafe_allow_html=True)
 
 # ==================================================
-# BIBLIOTECA
+# RÉGUA DE CONSCIÊNCIA
 # ==================================================
-elif st.session_state.pagina == "Biblioteca":
-    st.subheader("📚 Biblioteca de Criativos")
+st.markdown("## 📊 Régua de Consciência")
 
-    if not st.session_state.criativos:
-        st.info("Nenhum criativo cadastrado ainda.")
-    else:
-        for c in st.session_state.criativos:
-            with st.expander(c.nome):
-                st.write(f"Planejado: {c.estagio_planejado}")
-                st.write(f"CTA: {c.cta}")
-                st.write(f"Esforço: {c.esforco}")
+st.markdown("""
+<div class="block">
+Todo criativo deve ser analisado pelo que ele exige da mente.
+
+Perguntas essenciais:
+
+Esse vídeo pede decisão ou curiosidade?  
+Ele explica o porquê ou apenas mostra que existe?  
+Ele reduz ou aumenta o risco mental?  
+Quanto esforço cognitivo exige?
+
+<br>
+Essa régua define se o criativo é TOFU, MOFU ou BOFU.
+</div>
+""", unsafe_allow_html=True)
 
 # ==================================================
-# DIAGNÓSTICO
+# TOFU
 # ==================================================
-elif st.session_state.pagina == "Diagnóstico":
-    st.subheader("📈 Diagnóstico do Funil")
+st.markdown("## 🔹 TOFU — Primeiro Contato")
 
-    if not st.session_state.criativos:
-        st.info("Cadastre criativos para gerar diagnóstico.")
-    else:
-        total = len(st.session_state.criativos)
-        st.metric("Total de criativos", total)
+with st.expander("🧠 Estágio mental do público"):
+    st.write("""
+“Isso existe… e talvez seja pra mim.”
 
-        st.success("""
-        Use este diagnóstico para responder:
-        Onde estou pedindo decisão cedo demais?
-        Onde falta educação?
-        Onde falta segurança?
-        """)
+O usuário ainda não quer comprar.  
+Mas já consegue se enxergar no cenário.  
+Reconhecer a dor.  
+Aceitar a existência da solução.
+""")
 
+with st.expander("🎯 Objetivo real do TOFU"):
+    st.write("""
+Criar identificação com a rotina diária.
+
+O produto aparece de forma breve, natural e não invasiva.
+
+Mostrar demais gera rejeição.  
+Esconder demais perde sinal.  
+
+O equilíbrio é o que escala.
+""")
+
+with st.expander("📹 Formato ideal de criativo"):
+    st.write("""
+Vídeos até 20 segundos.  
+Situação cotidiana real.  
+Dor silenciosa, sem exagero.  
+Produto como parte da rotina.  
+Micro curiosidade.  
+CTA leve.
+""")
+
+with st.expander("📊 Métricas-chave"):
+    st.write("""
+ThruPlay  
+50% de vídeo  
+CPM saudável  
+
+Essas métricas medem atenção qualificada, não venda.
+""")
+
+st.info("No TOFU, o produto aparece como parte da rotina, não como argumento de venda.")
+
+# ==================================================
+# MOFU
+# ==================================================
+st.markdown("## 🟡 MOFU — Educação e Justificação")
+
+with st.expander("🧠 Estágio mental do público"):
+    st.write("""
+“Ok… isso pode funcionar.  
+Mas será que funciona pra mim?”
+
+Aqui surgem ceticismo, comparação e busca por lógica.
+""")
+
+with st.expander("🎯 Objetivo real do MOFU"):
+    st.write("""
+Justificar racionalmente a solução sem pedir compra.
+
+Explicar o porquê.  
+Mostrar o como, sem entregar tudo.  
+Reduzir objeções silenciosas.
+""")
+
+with st.expander("📹 Formato ideal de criativo"):
+    st.write("""
+Vídeos de 30 a 60 segundos.
+
+Reforço da dor.  
+Introdução do mecanismo.  
+Comparação implícita.  
+Micro prova.  
+CTA de aprofundamento.
+""")
+
+st.info("MOFU existe para explicar o que o público já começou a suspeitar.")
+
+# ==================================================
+# BOFU
+# ==================================================
+st.markdown("## 🔴 BOFU — Decisão e Conversão")
+
+with st.expander("🧠 Estágio mental do público"):
+    st.write("""
+“Eu já entendi.  
+Agora só não quero errar.”
+
+O medo aqui é apenas da escolha.
+""")
+
+with st.expander("🎯 Objetivo real do BOFU"):
+    st.write("""
+Facilitar a decisão reduzindo:
+
+Risco percebido  
+Medo de arrependimento  
+Dúvida de qualidade  
+Insegurança pós-compra
+""")
+
+with st.expander("📹 Formato ideal de criativo"):
+    st.write("""
+Vídeos de 15 a 40 segundos.
+
+Confirmação do problema.  
+Prova real.  
+Validação social ou técnica.  
+Oferta clara.  
+CTA de ação.
+""")
+
+st.warning("Se o BOFU precisa explicar demais, o MOFU falhou.")
+st.info("BOFU não empurra a venda. Ele dá segurança para decidir.")
+
+# ==================================================
+# RESUMO FINAL
+# ==================================================
+st.markdown("## 🔥 Resumo Final — Mente do Público")
+
+st.markdown("""
+<div class="block">
+TOFU responde: “Isso existe?”  
+MOFU responde: “Isso faz sentido?”  
+BOFU responde: “Posso confiar?”
+
+<br>
+Quando seus anúncios seguem esse raciocínio,  
+a escala deixa de ser tentativa e vira consequência.
+</div>
+""", unsafe_allow_html=True)
