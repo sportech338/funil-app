@@ -91,9 +91,10 @@ st.caption("Escala não é tráfego. É psicologia aplicada.")
 # ======================================================
 if section == "📘 Fundamentos":
 
-    tab_principio, tab_funil = st.tabs([
+    tab_principio, tab_funil, tab_regua = st.tabs([
         "1️⃣ Princípio Central",
-        "📐 Arquitetura Mental"
+        "📐 Arquitetura Mental",
+        "📏 Checklist de Classificação"
     ])
 
     # ==================================================
@@ -196,6 +197,85 @@ Isso acontece porque a mente ainda não está pronta.
 
 <p class="highlight">
 MOFU tira objeções. BOFU tira medo.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+        # ---------- PAPEL DO PAGEVIEW ----------
+        st.markdown("""
+<div class="card">
+<div class="title">👁️ O Papel do PageView</div>
+
+<p>
+<b>PageView não é intenção de compra.</b><br>
+PageView é <span class="highlight">curiosidade estruturada</span>.
+</p>
+
+<ul>
+<li>Indica interesse real</li>
+<li>Não indica decisão</li>
+<li>Não deve ser usado isoladamente</li>
+</ul>
+
+<p class="muted">
+📌 Uso correto:<br>
+PageView + vídeo ou engajamento
+</p>
+
+<p class="highlight">
+PageView prepara. BOFU confirma.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+    # ==================================================
+    # 📏 CHECKLIST BINÁRIO — CLASSIFICAÇÃO
+    # ==================================================
+    with tab_regua:
+        st.markdown("""
+<div class="card">
+<div class="title">📏 Checklist Binário de Classificação</div>
+
+<b>🔵 TOFU — só é TOFU se:</b>
+<ul>
+<li>❏ Não pede compra</li>
+<li>❏ Não fala de preço ou desconto</li>
+<li>❏ Produto aparece de forma breve</li>
+<li>❏ Dor aparece mais que a solução</li>
+<li>❏ CTA é “Saiba mais”</li>
+</ul>
+
+<p class="muted">
+Se falhar em <b>1 item</b> → não é TOFU.
+</p>
+
+<hr>
+
+<b>🟡 MOFU — só é MOFU se:</b>
+<ul>
+<li>❏ Explica por que funciona</li>
+<li>❏ Introduz mecanismo ou lógica</li>
+<li>❏ Reduz objeções silenciosas</li>
+<li>❏ Não cria urgência</li>
+<li>❏ CTA não é compra</li>
+</ul>
+
+<p class="muted">
+Se começa a vender → virou BOFU.
+</p>
+
+<hr>
+
+<b>🔴 BOFU — só é BOFU se:</b>
+<ul>
+<li>❏ Assume que o usuário já entende</li>
+<li>❏ Usa prova real</li>
+<li>❏ Remove risco percebido</li>
+<li>❏ CTA direto de ação</li>
+</ul>
+
+<p class="highlight">
+Essa régua protege o funil em escala.
 </p>
 </div>
 """, unsafe_allow_html=True)
