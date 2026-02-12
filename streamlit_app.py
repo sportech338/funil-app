@@ -6,28 +6,33 @@ st.set_page_config(
 )
 
 # ==================================================
-# ESTILO VISUAL
+# ESTILO VISUAL CLEAN
 # ==================================================
 st.markdown("""
 <style>
-.block {
-    padding: 1.8rem;
-    border-radius: 16px;
+body {
+    color: #e5e7eb;
+}
+.card {
     background: #0e1117;
     border: 1px solid #1f2933;
-    margin-bottom: 1.6rem;
+    border-radius: 14px;
+    padding: 1.6rem;
+    margin-bottom: 1.4rem;
 }
-.small {
+.title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+.muted {
     color: #9ca3af;
-    font-size: 0.95rem;
 }
-.tag {
-    display: inline-block;
-    padding: 0.3rem 0.7rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    background: linear-gradient(90deg, #2563eb, #7c3aed);
+.highlight {
+    background: linear-gradient(90deg,#2563eb,#7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 .list {
     line-height: 1.8;
@@ -39,52 +44,50 @@ st.markdown("""
 # HEADER
 # ==================================================
 st.title("🧠 Manual Mental de Funil de Vendas")
-st.caption(
-    "Um manual visual para ensinar como funciona um funil baseado na mente real do público — "
-    "e como escalar sem quebrar o processo."
-)
-
+st.caption("Todo o conteúdo original organizado apenas em um layout limpo, visual e fácil de consumir.")
 st.divider()
 
 # ==================================================
 # ABAS
 # ==================================================
-tab_principio, tab_mente, tab_regua, tab_tofu, tab_mofu, tab_bofu, tab_mapa = st.tabs(
-    [
-        "🧠 Princípio",
-        "🧠 Mente do Público",
-        "📊 Régua",
-        "🔹 TOFU",
-        "🟡 MOFU",
-        "🔴 BOFU",
-        "🗺️ Mapa dos Criativos"
-    ]
-)
+tabs = st.tabs([
+    "🧠 Princípio Central",
+    "🧠 Mente do Público",
+    "📊 Régua de Consciência",
+    "🔹 TOFU",
+    "🟡 MOFU",
+    "🔴 BOFU",
+    "🔥 Resumo + Criativos"
+])
 
 # ==================================================
-# PRINCÍPIO
+# PRINCÍPIO CENTRAL
 # ==================================================
-with tab_principio:
+with tabs[0]:
     st.markdown("""
-    <div class="block">
-    O fluxo de escala só funciona quando replica o processo mental real do público-alvo.
+    <div class="card">
+    <div class="title">🧠 PRINCÍPIO CENTRAL</div>
 
-    Escala não é aumentar orçamento.  
-    Escala não é duplicar conjunto.  
-    Escala não é abrir LAL aleatório.
+    O fluxo de escala só funciona quando replica o processo mental real do público alvo.
+
+    <br><br>
+    Escala não é:
+    <div class="list">
+    aumentar orçamento<br>
+    duplicar conjunto<br>
+    abrir LAL aleatório
+    </div>
 
     <br>
-    <strong>Escala é ampliar algo que já está coerente com a mente do comprador.</strong>
-    </div>
-    """, unsafe_allow_html=True)
+    Escala é ampliar algo que já está coerente com a mente do comprador.
 
-    st.markdown("""
-    <div class="block">
-    O fator decisivo é o <span class="tag">timing mental</span>.
+    <br><br>
+    O mais importante é o <span class="highlight">timing mental</span>:
 
-    TOFU leve e escalável.  
-    MOFU lógico e educativo.  
-    BOFU forte, sem contaminar o funil.
+    <br><br>
+    TOFU leve e escalável<br>
+    MOFU lógico e educativo<br>
+    BOFU forte, sem contaminar o funil
 
     <br><br>
     👉 Isso é tráfego de escala, não de tentativa.
@@ -94,166 +97,190 @@ with tab_principio:
 # ==================================================
 # MENTE DO PÚBLICO
 # ==================================================
-with tab_mente:
+with tabs[1]:
     st.markdown("""
-    <div class="block">
-    Antes de comprar, a pessoa passa por estágios mentais reais:
+    <div class="card">
+    <div class="title">1️⃣ COMO A MENTE DO PÚBLICO FUNCIONA (REALIDADE)</div>
 
-    Desconhecimento  
-    Identificação do problema  
-    Comparação e ceticismo  
-    Confiança  
+    Antes de comprar, a pessoa passa por estágios mentais, não por funis bonitos no PowerPoint:
+
+    <div class="list">
+    Desconhecimento<br>
+    Identificação do problema<br>
+    Comparação / ceticismo<br>
+    Confiança<br>
     Decisão
+    </div>
 
     <br>
-    O Meta Ads só escala quando os anúncios acompanham essa progressão.
+    👉 O Meta Ads só escala quando seus anúncios acompanham essa progressão.
     </div>
     """, unsafe_allow_html=True)
 
     st.markdown("""
-    <div class="block">
-    <strong>Erro clássico de escala:</strong>
+    <div class="card">
+    <div class="title">2️⃣ O ERRO MAIS COMUM NA “ESCALA”</div>
 
-    Público aberto  
-    Criativo de oferta  
-    “Compre agora”  
+    🚨 Tentar escalar BOFU direto para público frio.
+
+    <br><br>
+    Exemplo clássico:
+
+    <div class="list">
+    Público aberto<br>
+    Criativo de oferta<br>
+    “Compre agora”<br>
+    Aumenta orçamento
+    </div>
 
     <br>
-    ROAS cai.  
-    CPM sobe.  
-    Algoritmo perde sinal.
+    ROAS cai<br>
+    CPM sobe<br>
+    Algoritmo perde sinal
 
-    <br>
-    Isso acontece porque a mente ainda não está pronta.
+    <br><br>
+    👉 Isso acontece porque a mente ainda não está pronta.
     </div>
     """, unsafe_allow_html=True)
 
 # ==================================================
-# RÉGUA
+# RÉGUA DE CONSCIÊNCIA
 # ==================================================
-with tab_regua:
+with tabs[2]:
     st.markdown("""
-    <div class="block">
-    Classifique todo criativo pelo que ele exige da mente:
+    <div class="card">
+    <div class="title">3️⃣ RÉGUA DE CONSCIÊNCIA</div>
 
-    ❓ Pede decisão ou curiosidade?  
-    🧠 Explica o porquê ou só mostra que existe?  
-    ⚠️ Reduz ou aumenta risco mental?  
+    Classifique cada criativo com base em:
+
+    <div class="list">
+    ❓ Esse vídeo pede decisão ou curiosidade?<br>
+    🧠 Ele explica “por quê” ou apenas mostra “que existe”?<br>
+    ⚠️ Ele aumenta ou reduz risco mental?<br>
     ⏱️ Quanto esforço cognitivo exige?
-
-    <br>
-    Essa régua define o nível do funil.
+    </div>
     </div>
     """, unsafe_allow_html=True)
 
 # ==================================================
 # TOFU
 # ==================================================
-with tab_tofu:
-    st.markdown("## 🔹 TOFU — Primeiro Contato")
-    st.markdown("<div class='block'><strong>Nível de consciência:</strong> “Isso existe?”</div>", unsafe_allow_html=True)
-
-    st.markdown("### 🎬 Tipos de criativo TOFU")
+with tabs[3]:
     st.markdown("""
-    <div class="block list">
-    Uso rápido no dia a dia  
-    Close sutil do produto  
-    Rotina real  
-    Identificação pessoal  
-    Produto resolve sem ser protagonista
+    <div class="card">
+    <div class="title">🔹 ETAPA 1 — TOFU (PRIMEIRO CONTATO)</div>
+
+    TOFU não é esconder o produto.<br>
+    TOFU é apresentar o produto sem exigir decisão.
+
+    <br><br>
+    <strong>Estágio mental do público</strong><br>
+    “Isso existe… e talvez seja pra mim.”
+
+    <br><br>
+    Aqui o usuário ainda não quer comprar, mas já consegue:
+    <div class="list">
+    se enxergar no cenário<br>
+    reconhecer a dor<br>
+    aceitar a existência da solução
+    </div>
+
+    <br>
+    <strong>OBJETIVO REAL DO TOFU</strong><br>
+    Criar identificação com a rotina diária, enquanto o produto aparece de forma breve, natural e não invasiva.
+
+    <br><br>
+    <strong>FORMATO IDEAL DE CRIATIVO</strong><br>
+    Vídeos curtos — até 20 segundos<br>
+    Situação cotidiana real<br>
+    Dor silenciosa (sem exagero)<br>
+    Produto aparece como parte da rotina<br>
+    Micro curiosidade<br>
+    CTA leve
+
+    <br><br>
+    CTA recomendado: “Saiba mais”
     </div>
     """, unsafe_allow_html=True)
-
-    st.markdown("### 🔵 Criativos TOFU — FLEXLIVE")
-    st.markdown("""
-    <div class="block list">
-    07 — Apresentação simples  
-    17 — Uso durante atividade  
-    24 — Rotina ativa  
-    25 — Lista objetiva de benefícios  
-    26 — Mensagens curtas  
-    29 — Rotina simples (10s)
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.info("Função mental: apresentar sem exigir decisão.")
 
 # ==================================================
 # MOFU
 # ==================================================
-with tab_mofu:
-    st.markdown("## 🟡 MOFU — Educação e Justificação")
-    st.markdown("<div class='block'><strong>Nível de consciência:</strong> “Isso faz sentido?”</div>", unsafe_allow_html=True)
-
-    st.markdown("### 🎬 Tipos de criativo MOFU")
+with tabs[4]:
     st.markdown("""
-    <div class="block list">
-    Educacional  
-    Mecanismo  
-    Comparação  
-    Demonstração parcial
+    <div class="card">
+    <div class="title">🔹 ETAPA 2 — MOFU (EDUCAÇÃO + JUSTIFICAÇÃO)</div>
+
+    MOFU não vende.<br>
+    MOFU faz sentido.
+
+    <br><br>
+    <strong>Estágio mental do público</strong><br>
+    “Ok… isso pode funcionar. Mas será que funciona pra mim?”
+
+    <br><br>
+    <strong>OBJETIVO REAL DO MOFU</strong><br>
+    Justificar racionalmente a solução, sem pedir compra.
+
+    <br><br>
+    <strong>FORMATO IDEAL DE CRIATIVO</strong><br>
+    Vídeos de 30 a 60 segundos<br>
+    Reforço da dor já reconhecida<br>
+    Introdução do mecanismo<br>
+    Comparação implícita<br>
+    Micro prova<br>
+    CTA de aprofundamento
     </div>
     """, unsafe_allow_html=True)
-
-    st.markdown("### 🟡 Criativos MOFU — FLEXLIVE")
-    st.markdown("""
-    <div class="block list">
-    02 — Anti-inflamatório vs natural  
-    03 — Pesquisa + mecanismo  
-    04 — Dor crônica  
-    16 — Comparação com joelheira  
-    22 — Profissional em pé  
-    28 — Passo a passo  
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.info("Função mental: organizar raciocínio e reduzir ceticismo.")
 
 # ==================================================
 # BOFU
 # ==================================================
-with tab_bofu:
-    st.markdown("## 🔴 BOFU — Decisão")
-    st.markdown("<div class='block'><strong>Nível de consciência:</strong> “Posso confiar?”</div>", unsafe_allow_html=True)
-
-    st.markdown("### 🎬 Tipos de criativo BOFU")
+with tabs[5]:
     st.markdown("""
-    <div class="block list">
-    Prova social  
-    Antes e depois funcional  
-    Autoridade  
-    Oferta estruturada  
-    Escassez legítima
+    <div class="card">
+    <div class="title">🔹 ETAPA 3 — BOFU (DECISÃO + CONVERSÃO)</div>
+
+    BOFU não é persuasão.<br>
+    BOFU é confirmação.
+
+    <br><br>
+    <strong>Estágio mental do público</strong><br>
+    “Eu já entendi. Agora só não quero errar.”
+
+    <br><br>
+    <strong>OBJETIVO REAL DO BOFU</strong><br>
+    Facilitar a decisão reduzindo risco percebido, medo de arrependimento,
+    dúvida de qualidade e insegurança pós-compra.
+
+    <br><br>
+    <strong>FORMATO IDEAL DE CRIATIVO</strong><br>
+    Vídeos de 15 a 40 segundos<br>
+    Confirmação do problema<br>
+    Prova real<br>
+    Validação social ou técnica<br>
+    Oferta clara<br>
+    CTA de ação
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("### 🔴 Criativos BOFU — FLEXLIVE")
-    st.markdown("""
-    <div class="block list">
-    13 — Benefícios + oferta  
-    20 — Oferta direta  
-    23 — Rotina + desconto  
-    27 — Prova familiar  
-    01 — História longa  
-    09 — Dor extrema + garantia
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.warning("Se o BOFU precisa explicar demais, o MOFU falhou.")
-
 # ==================================================
-# MAPA FINAL
+# RESUMO + CRIATIVOS
 # ==================================================
-with tab_mapa:
+with tabs[6]:
     st.markdown("""
-    <div class="block">
+    <div class="card">
+    <div class="title">🔥 RESUMO FINAL DO FUNIL</div>
+
+    TOFU: “Isso existe?”<br>
+    MOFU: “Isso faz sentido?”<br>
+    BOFU: “Posso confiar?”
+
+    <br><br>
+    Quando seus anúncios seguem esse raciocínio,
+    a escala deixa de ser tentativa e vira consequência.
+
+    <br><br>
     🔢 31 criativos organizados por função mental.
-
-    TOFU apresenta.  
-    MOFU explica.  
-    BOFU confirma.
-
-    <br>
-    Escalar fora dessa ordem quebra o funil.
     </div>
     """, unsafe_allow_html=True)
