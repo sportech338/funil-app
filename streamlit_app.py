@@ -74,9 +74,6 @@ section = st.sidebar.radio(
     [
         "📘 Fundamentos",
         "🧠 Funil Mental",
-        "🔵 TOFU",
-        "🟡 MOFU",
-        "🔴 BOFU",
         "🔢 Criativos — Execução",
         "🔥 Resumo Final",
     ]
@@ -125,7 +122,7 @@ elif section == "🧠 Funil Mental":
 
     st.markdown("""
 <div class="card">
-<div class="title">🧠 Como a mente do público funciona</div>
+<div class="title">🧠 Funil Mental — Progressão Psicológica</div>
 
 <ul>
 <li>Desconhecimento</li>
@@ -188,12 +185,19 @@ MOFU tira objeções. BOFU tira medo.
 </div>
 """, unsafe_allow_html=True)
 
+    # ======================================================
+    # ABAS DO FUNIL
+    # ======================================================
+    tab_tofu, tab_mofu, tab_bofu = st.tabs([
+        "🔵 TOFU",
+        "🟡 MOFU",
+        "🔴 BOFU"
+    ])
 
-# ======================================================
-# TOFU
-# ======================================================
-elif section == "🔵 TOFU":
-    with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)", expanded=True):
+    # ======================================================
+    # 🔵 TOFU
+    # ======================================================
+    with tab_tofu:
         st.markdown("""
 <div class="card">
 
@@ -236,51 +240,38 @@ elif section == "🔵 TOFU":
 
 <b>Métricas:</b> ThruPlay · 50% vídeo · CPM saudável
 
-<hr>
-
-<b>Papel do TOFU na escala:</b>
-<ul>
-<li>Gera públicos quentes</li>
-<li>Cria curiosos compradores</li>
-<li>Planta dúvida nos céticos</li>
-<li>Alimenta MOFU e BOFU</li>
-<li>Mantém CPM baixo</li>
-</ul>
-
 <p class="highlight">
 “No TOFU, o produto aparece como parte da rotina, não como argumento de venda.”
 </p>
 </div>
 """, unsafe_allow_html=True)
 
-    st.markdown("### 🧠 Diagnóstico Mental — TOFU")
+        st.markdown("### 🧠 Diagnóstico Mental — TOFU")
 
-    checks = [
-        "O criativo NÃO pede compra",
-        "O produto aparece como parte da rotina",
-        "Não existe oferta, desconto ou urgência",
-        "O CTA é leve (Saiba mais)",
-        "O criativo gera curiosidade, não decisão",
-    ]
+        checks = [
+            "O criativo NÃO pede compra",
+            "O produto aparece como parte da rotina",
+            "Não existe oferta, desconto ou urgência",
+            "O CTA é leve (Saiba mais)",
+            "O criativo gera curiosidade, não decisão",
+        ]
 
-    score = 0
-    for c in checks:
-        if st.checkbox(c):
-            score += 1
+        score = 0
+        for c in checks:
+            if st.checkbox(c, key=f"tofu_{c}"):
+                score += 1
 
-    if score == len(checks):
-        st.success("✅ TOFU PURO — pronto para escalar.")
-    elif score >= 3:
-        st.warning("⚠️ TOFU contaminado. Cuidado ao escalar.")
-    else:
-        st.error("❌ Isso NÃO é TOFU. É BOFU disfarçado.")
+        if score == len(checks):
+            st.success("✅ TOFU PURO — pronto para escalar.")
+        elif score >= 3:
+            st.warning("⚠️ TOFU contaminado. Cuidado ao escalar.")
+        else:
+            st.error("❌ Isso NÃO é TOFU. É BOFU disfarçado.")
 
-
-# ======================================================
-# MOFU
-# ======================================================
-elif section == "🟡 MOFU":
-    with st.expander("🟡 ETAPA 2 — MOFU (Educação + Justificação)", expanded=True):
+    # ======================================================
+    # 🟡 MOFU
+    # ======================================================
+    with tab_mofu:
         st.markdown("""
 <div class="card">
 
@@ -311,55 +302,38 @@ elif section == "🟡 MOFU":
 
 <hr>
 
-<b>Métricas:</b> 50–75% vídeo · CTR · Tempo médio
-
-<hr>
-
-<b>Papel do MOFU na escala:</b>
-<ul>
-<li>Transforma curiosos em interessados</li>
-<li>Filtra compradores reais</li>
-<li>Reduz objeções no checkout</li>
-<li>Prepara BOFU para converter barato</li>
-</ul>
-
 <p class="highlight">
 “MOFU existe para explicar o que o público já começou a suspeitar.”
-</p>
-
-<p class="muted">
-Se o MOFU estiver fraco, o BOFU fica caro.
 </p>
 </div>
 """, unsafe_allow_html=True)
 
-    st.markdown("### 🧠 Diagnóstico Mental — MOFU")
+        st.markdown("### 🧠 Diagnóstico Mental — MOFU")
 
-    checks = [
-        "O criativo explica o porquê da solução",
-        "Existe lógica ou mecanismo claro",
-        "Reduz medo ou ceticismo",
-        "Não força compra direta",
-        "Prepara o público para decidir depois",
-    ]
+        checks = [
+            "O criativo explica o porquê da solução",
+            "Existe lógica ou mecanismo claro",
+            "Reduz medo ou ceticismo",
+            "Não força compra direta",
+            "Prepara o público para decidir depois",
+        ]
 
-    score = 0
-    for c in checks:
-        if st.checkbox(c):
-            score += 1
+        score = 0
+        for c in checks:
+            if st.checkbox(c, key=f"mofu_{c}"):
+                score += 1
 
-    if score == len(checks):
-        st.success("✅ MOFU forte — BOFU tende a ficar barato.")
-    elif score >= 3:
-        st.warning("⚠️ MOFU razoável — atenção no BOFU.")
-    else:
-        st.error("❌ MOFU fraco — BOFU VAI ficar caro.")
+        if score == len(checks):
+            st.success("✅ MOFU forte — BOFU tende a ficar barato.")
+        elif score >= 3:
+            st.warning("⚠️ MOFU razoável — atenção no BOFU.")
+        else:
+            st.error("❌ MOFU fraco — BOFU VAI ficar caro.")
 
-# ======================================================
-# BOFU
-# ======================================================
-elif section == "🔴 BOFU":
-    with st.expander("🔴 ETAPA 3 — BOFU (Decisão + Conversão)", expanded=True):
+    # ======================================================
+    # 🔴 BOFU
+    # ======================================================
+    with tab_bofu:
         st.markdown("""
 <div class="card">
 
@@ -400,48 +374,34 @@ elif section == "🔴 BOFU":
 
 <hr>
 
-<b>Métricas:</b> CPA · ROAS · Conversão
-
-<hr>
-
-<b>Papel do BOFU na escala:</b>
-<ul>
-<li>Protege margem</li>
-<li>Estabiliza ROAS</li>
-<li>Valida o funil inteiro</li>
-</ul>
-
 <p class="highlight">
 “BOFU não empurra a venda. Ele dá segurança para decidir.”
-</p>
-
-<p class="muted">
-Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
 </p>
 </div>
 """, unsafe_allow_html=True)
 
-    st.markdown("### 🧠 Diagnóstico Mental — BOFU")
+        st.markdown("### 🧠 Diagnóstico Mental — BOFU")
 
-    checks = [
-        "A oferta está clara",
-        "Existe prova social real",
-        "O benefício principal está explícito",
-        "O CTA é direto e coerente",
-        "O criativo transmite segurança",
-    ]
+        checks = [
+            "A oferta está clara",
+            "Existe prova social real",
+            "O benefício principal está explícito",
+            "O CTA é direto e coerente",
+            "O criativo transmite segurança",
+        ]
 
-    score = 0
-    for c in checks:
-        if st.checkbox(c):
-            score += 1
+        score = 0
+        for c in checks:
+            if st.checkbox(c, key=f"bofu_{c}"):
+                score += 1
 
-    if score == len(checks):
-        st.success("✅ BOFU pronto para converter.")
-    elif score >= 3:
-        st.warning("⚠️ BOFU ok, mas pode melhorar.")
-    else:
-        st.error("❌ BOFU fraco — o problema pode estar no MOFU.")
+        if score == len(checks):
+            st.success("✅ BOFU pronto para converter.")
+        elif score >= 3:
+            st.warning("⚠️ BOFU ok, mas pode melhorar.")
+        else:
+            st.error("❌ BOFU fraco — o problema pode estar no MOFU.")
+
 
 # ======================================================
 # CRIATIVOS — EXECUÇÃO
