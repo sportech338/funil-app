@@ -201,7 +201,7 @@ elif section == "🔁 Relação das Etapas":
 # ======================================================
 # TOFU
 # ======================================================
-elif section == "🔹 TOFU":
+elif section == "🔵 TOFU":
     with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)", expanded=True):
         st.markdown("""
 <div class="card">
