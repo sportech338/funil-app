@@ -70,18 +70,12 @@ li { margin-bottom: 0.35rem; }
 st.sidebar.title("🧠 Navegação Mental")
 
 section = st.sidebar.radio(
-    "Escolha a seção:",
+    "Modo de navegação:",
     [
-        "📘 Princípio Central",
-        "🧠 Mente do Público",
-        "🚨 Erro de Escala",
-        "📏 Régua de Consciência",
-        "🔁 Relação das Etapas",
-        "🔵 TOFU",
-        "🟡 MOFU",
-        "🔴 BOFU",
-        "🔢 Criativos — Execução",
-        "🔥 Resumo Final",
+        "📘 Fundamentos",
+        "🧠 Funil",
+        "🔢 Criativos",
+        "🔥 Resumo",
     ]
 )
 
@@ -91,7 +85,7 @@ section = st.sidebar.radio(
 st.title("🧠 Manual Mental de Funil de Vendas")
 st.caption("Escala não é tráfego. É psicologia aplicada.")
 
-if section == "📘 Princípio Central":
+if section == "📘 Fundamentos":
     st.markdown("""
     <div class="card">
     <div class="title">🧠 Princípio Central</div>
