@@ -136,7 +136,7 @@ O fluxo de escala só funciona quando replica o
     with tab_funil:
         st.markdown("""
 <div class="card">
-<div class="title">🧠 Arquitetura Mental — Progressão Psicológica</div>
+<div class="title">🧠 Progressão Psicológica</div>
 
 <ul>
 <li>Desconhecimento</li>
