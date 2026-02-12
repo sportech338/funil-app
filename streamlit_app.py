@@ -77,7 +77,7 @@ section = st.sidebar.radio(
         "🚨 Erro de Escala",
         "📏 Régua de Consciência",
         "🔁 Relação das Etapas",
-        "🔹 TOFU",
+        "🔵 TOFU",
         "🟡 MOFU",
         "🔴 BOFU",
         "🔢 Criativos — Execução",
