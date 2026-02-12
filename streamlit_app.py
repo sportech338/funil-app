@@ -118,8 +118,8 @@ if section == "📘 Fundamentos":
     """, unsafe_allow_html=True)
 
 
-elif section == "🧠 Mente do Público":
-    st.markdown("""
+elif section == "🧠 Funil":
+    st.markdown("## 🧠 Funil — Estrutura Mental")
     <div class="card">
     <div class="title">1️⃣ Como a mente do público funciona</div>
 
