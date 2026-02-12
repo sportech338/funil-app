@@ -85,53 +85,49 @@ section = st.sidebar.radio(
 st.title("🧠 Manual Mental de Funil de Vendas")
 st.caption("Escala não é tráfego. É psicologia aplicada.")
 
+# ======================================================
+# FUNDAMENTOS
+# ======================================================
 if section == "📘 Fundamentos":
+
+    # --------------------------------------------------
+    # PRINCÍPIO CENTRAL
+    # --------------------------------------------------
     st.markdown("""
-    <div class="card">
-    <div class="title">🧠 Princípio Central</div>
+<div class="card">
+<div class="title">🧠 Princípio Central</div>
 
-    O fluxo de escala só funciona quando replica o
-    <span class="highlight">processo mental real do público</span>.
+O fluxo de escala só funciona quando replica o
+<span class="highlight">processo mental real do público</span>.
 
-    <hr>
+<hr>
 
-    <b>Escala não é:</b>
-    <ul>
-    <li>Aumentar orçamento</li>
-    <li>Duplicar conjunto</li>
-    <li>Abrir LAL aleatório</li>
-    </ul>
+<b>Escala não é:</b>
+<ul>
+<li>Aumentar orçamento</li>
+<li>Duplicar conjunto</li>
+<li>Abrir LAL aleatório</li>
+</ul>
 
-    <b>Escala é ampliar algo que já está coerente com a mente do comprador.</b>
+<b>Escala é ampliar algo que já está coerente com a mente do comprador.</b>
 
-    <hr>
+<hr>
 
-    <b>Timing mental correto:</b>
-    <ul>
-    <li>TOFU leve e escalável</li>
-    <li>MOFU lógico e educativo</li>
-    <li>BOFU forte, sem contaminar o funil</li>
-    </ul>
+<b>Timing mental correto:</b>
+<ul>
+<li>TOFU leve e escalável</li>
+<li>MOFU lógico e educativo</li>
+<li>BOFU forte, sem contaminar o funil</li>
+</ul>
 
-    <b>👉 Isso é tráfego de escala, não de tentativa.</b>
-    </div>
-    """, unsafe_allow_html=True)
+<b>👉 Isso é tráfego de escala, não de tentativa.</b>
+</div>
+""", unsafe_allow_html=True)
 
-
-elif section == "🧠 Funil Mental":
-
-    tab_base, tab_tofu, tab_mofu, tab_bofu = st.tabs([
-        "🧠 Fundamento Mental",
-        "🔵 TOFU",
-        "🟡 MOFU",
-        "🔴 BOFU"
-    ])
-
-    # ======================================================
-    # 🧠 FUNDAMENTO MENTAL
-    # ======================================================
-    with tab_base:
-        st.markdown("""
+    # --------------------------------------------------
+    # PROGRESSÃO PSICOLÓGICA
+    # --------------------------------------------------
+    st.markdown("""
 <div class="card">
 <div class="title">🧠 Funil Mental — Progressão Psicológica</div>
 
@@ -149,7 +145,10 @@ O Meta Ads só escala quando seus anúncios acompanham essa progressão.
 </div>
 """, unsafe_allow_html=True)
 
-        st.markdown("""
+    # --------------------------------------------------
+    # ERRO MAIS COMUM NA ESCALA
+    # --------------------------------------------------
+    st.markdown("""
 <div class="card">
 <div class="title">🚨 O erro mais comum na escala</div>
 
@@ -169,7 +168,10 @@ Isso acontece porque a mente ainda não está pronta.
 </div>
 """, unsafe_allow_html=True)
 
-        st.markdown("""
+    # --------------------------------------------------
+    # RÉGUA DE CONSCIÊNCIA + RELAÇÃO
+    # --------------------------------------------------
+    st.markdown("""
 <div class="card">
 <div class="title">📏 Régua de Consciência</div>
 
@@ -195,6 +197,15 @@ MOFU tira objeções. BOFU tira medo.
 </p>
 </div>
 """, unsafe_allow_html=True)
+
+
+elif section == "🧠 Funil Mental":
+
+    tab_tofu, tab_mofu, tab_bofu = st.tabs([
+        "🔵 TOFU",
+        "🟡 MOFU",
+        "🔴 BOFU"
+    ])
 
     # ======================================================
     # 🔵 TOFU
