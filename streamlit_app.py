@@ -1,18 +1,22 @@
 import streamlit as st
 
+# ======================================================
+# CONFIGURAÇÃO DA PÁGINA
+# ======================================================
 st.set_page_config(
     page_title="Manual Mental de Funil de Vendas",
-    layout="wide"
+    layout="wide",
 )
 
-# ==================================================
-# ESTILO VISUAL CLEAN
-# ==================================================
+# ======================================================
+# ESTILO VISUAL (CSS)
+# ======================================================
 st.markdown("""
 <style>
 body {
     color: #e5e7eb;
 }
+
 .card {
     background: #0e1117;
     border: 1px solid #1f2933;
@@ -20,267 +24,251 @@ body {
     padding: 1.6rem;
     margin-bottom: 1.4rem;
 }
+
 .title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.6rem;
 }
+
 .muted {
     color: #9ca3af;
+    font-size: 0.95rem;
 }
+
 .highlight {
-    background: linear-gradient(90deg,#2563eb,#7c3aed);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    padding: 0.15rem 0.45rem;
+    border-radius: 6px;
+    font-weight: 600;
 }
-.list {
-    line-height: 1.8;
+
+hr {
+    border: none;
+    border-top: 1px solid #1f2933;
+    margin: 1rem 0;
+}
+
+ul {
+    margin-left: 1.2rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
 }
 </style>
 """, unsafe_allow_html=True)
 
-# ==================================================
-# HEADER
-# ==================================================
+# ======================================================
+# TÍTULO PRINCIPAL
+# ======================================================
 st.title("🧠 Manual Mental de Funil de Vendas")
-st.caption("Todo o conteúdo original organizado apenas em um layout limpo, visual e fácil de consumir.")
-st.divider()
+st.caption("Tráfego de escala não replica anúncios. Replica a mente do comprador.")
 
-# ==================================================
-# ABAS
-# ==================================================
-tabs = st.tabs([
-    "🧠 Princípio Central",
-    "🧠 Mente do Público",
-    "📊 Régua de Consciência",
-    "🔹 TOFU",
-    "🟡 MOFU",
-    "🔴 BOFU",
-    "🔥 Resumo + Criativos"
-])
-
-# ==================================================
+# ======================================================
 # PRINCÍPIO CENTRAL
-# ==================================================
-with tabs[0]:
-    st.markdown("""
-    <div class="card">
-    <div class="title">🧠 PRINCÍPIO CENTRAL</div>
+# ======================================================
+st.markdown("""
+<div class="card">
+  <div class="title">🧠 Princípio Central</div>
 
-    O fluxo de escala só funciona quando replica o processo mental real do público alvo.
+  <p>
+    O fluxo de escala só funciona quando replica o
+    <span class="highlight">processo mental real do público</span>.
+  </p>
 
-    <br><br>
-    Escala não é:
-    <div class="list">
-    aumentar orçamento<br>
-    duplicar conjunto<br>
-    abrir LAL aleatório
-    </div>
-
-    <br>
+  <p class="muted">
+    Escala não é aumentar orçamento, duplicar conjuntos ou abrir públicos aleatórios.<br>
     Escala é ampliar algo que já está coerente com a mente do comprador.
+  </p>
 
-    <br><br>
-    O mais importante é o <span class="highlight">timing mental</span>:
+  <hr>
 
-    <br><br>
-    TOFU leve e escalável<br>
-    MOFU lógico e educativo<br>
-    BOFU forte, sem contaminar o funil
+  <b>Timing mental correto:</b>
+  <ul>
+    <li>TOFU — leve e escalável</li>
+    <li>MOFU — lógico e educativo</li>
+    <li>BOFU — forte, sem contaminar o funil</li>
+  </ul>
 
-    <br><br>
-    👉 Isso é tráfego de escala, não de tentativa.
-    </div>
-    """, unsafe_allow_html=True)
+  <p><b>👉 Isso é tráfego de escala, não de tentativa.</b></p>
+</div>
+""", unsafe_allow_html=True)
 
-# ==================================================
-# MENTE DO PÚBLICO
-# ==================================================
-with tabs[1]:
-    st.markdown("""
-    <div class="card">
-    <div class="title">1️⃣ COMO A MENTE DO PÚBLICO FUNCIONA (REALIDADE)</div>
+# ======================================================
+# ERRO MAIS COMUM
+# ======================================================
+st.markdown("""
+<div class="card">
+  <div class="title">🚨 O erro mais comum na “escala”</div>
 
-    Antes de comprar, a pessoa passa por estágios mentais, não por funis bonitos no PowerPoint:
+  <p>Tentar escalar BOFU direto para público frio:</p>
 
-    <div class="list">
-    Desconhecimento<br>
-    Identificação do problema<br>
-    Comparação / ceticismo<br>
-    Confiança<br>
-    Decisão
-    </div>
+  <ul>
+    <li>Público aberto</li>
+    <li>Criativo de oferta</li>
+    <li>“Compre agora”</li>
+    <li>Aumenta orçamento</li>
+    <li>ROAS cai • CPM sobe • Algoritmo perde sinal</li>
+  </ul>
 
-    <br>
-    👉 O Meta Ads só escala quando seus anúncios acompanham essa progressão.
-    </div>
-    """, unsafe_allow_html=True)
+  <p class="highlight">
+    Isso acontece porque a mente ainda não está pronta.
+  </p>
+</div>
+""", unsafe_allow_html=True)
 
-    st.markdown("""
-    <div class="card">
-    <div class="title">2️⃣ O ERRO MAIS COMUM NA “ESCALA”</div>
-
-    🚨 Tentar escalar BOFU direto para público frio.
-
-    <br><br>
-    Exemplo clássico:
-
-    <div class="list">
-    Público aberto<br>
-    Criativo de oferta<br>
-    “Compre agora”<br>
-    Aumenta orçamento
-    </div>
-
-    <br>
-    ROAS cai<br>
-    CPM sobe<br>
-    Algoritmo perde sinal
-
-    <br><br>
-    👉 Isso acontece porque a mente ainda não está pronta.
-    </div>
-    """, unsafe_allow_html=True)
-
-# ==================================================
+# ======================================================
 # RÉGUA DE CONSCIÊNCIA
-# ==================================================
-with tabs[2]:
-    st.markdown("""
-    <div class="card">
-    <div class="title">3️⃣ RÉGUA DE CONSCIÊNCIA</div>
+# ======================================================
+st.markdown("""
+<div class="card">
+  <div class="title">🧩 Régua de Consciência</div>
 
-    Classifique cada criativo com base em:
+  <ul>
+    <li>❓ O criativo pede decisão ou curiosidade?</li>
+    <li>🧠 Ele explica o “por quê” ou apenas mostra que existe?</li>
+    <li>⚠️ Ele aumenta ou reduz risco mental?</li>
+    <li>⏱️ Quanto esforço cognitivo exige?</li>
+  </ul>
+</div>
+""", unsafe_allow_html=True)
 
-    <div class="list">
-    ❓ Esse vídeo pede decisão ou curiosidade?<br>
-    🧠 Ele explica “por quê” ou apenas mostra “que existe”?<br>
-    ⚠️ Ele aumenta ou reduz risco mental?<br>
-    ⏱️ Quanto esforço cognitivo exige?
-    </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-# ==================================================
+# ======================================================
 # TOFU
-# ==================================================
-with tabs[3]:
+# ======================================================
+with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)"):
     st.markdown("""
     <div class="card">
-    <div class="title">🔹 ETAPA 1 — TOFU (PRIMEIRO CONTATO)</div>
+      <b>Estágio mental:</b><br>
+      “Isso existe… talvez seja pra mim.”
 
-    TOFU não é esconder o produto.<br>
-    TOFU é apresentar o produto sem exigir decisão.
+      <hr>
 
-    <br><br>
-    <strong>Estágio mental do público</strong><br>
-    “Isso existe… e talvez seja pra mim.”
+      <b>Objetivo real:</b><br>
+      Criar identificação com a rotina diária, enquanto o produto aparece
+      de forma breve, natural e sem exigir decisão.
 
-    <br><br>
-    Aqui o usuário ainda não quer comprar, mas já consegue:
-    <div class="list">
-    se enxergar no cenário<br>
-    reconhecer a dor<br>
-    aceitar a existência da solução
-    </div>
+      <hr>
 
-    <br>
-    <strong>OBJETIVO REAL DO TOFU</strong><br>
-    Criar identificação com a rotina diária, enquanto o produto aparece de forma breve, natural e não invasiva.
+      <b>Formato ideal:</b>
+      <ul>
+        <li>Vídeos curtos — até 20s</li>
+        <li>Situação cotidiana real</li>
+        <li>Dor silenciosa (sem exagero)</li>
+        <li>Produto como parte da rotina</li>
+        <li>Micro curiosidade</li>
+        <li>CTA leve</li>
+      </ul>
 
-    <br><br>
-    <strong>FORMATO IDEAL DE CRIATIVO</strong><br>
-    Vídeos curtos — até 20 segundos<br>
-    Situação cotidiana real<br>
-    Dor silenciosa (sem exagero)<br>
-    Produto aparece como parte da rotina<br>
-    Micro curiosidade<br>
-    CTA leve
+      <p class="highlight">CTA recomendado: “Saiba mais”</p>
 
-    <br><br>
-    CTA recomendado: “Saiba mais”
+      <p class="muted">
+        Métricas-chave: ThruPlay • 50% de vídeo • CPM saudável
+      </p>
+
+      <p><b>Frase do manual:</b><br>
+      “No TOFU, o produto aparece como parte da rotina, não como argumento de venda.”
+      </p>
     </div>
     """, unsafe_allow_html=True)
 
-# ==================================================
+# ======================================================
 # MOFU
-# ==================================================
-with tabs[4]:
+# ======================================================
+with st.expander("🟡 ETAPA 2 — MOFU (Educação + Justificação)"):
     st.markdown("""
     <div class="card">
-    <div class="title">🔹 ETAPA 2 — MOFU (EDUCAÇÃO + JUSTIFICAÇÃO)</div>
+      <b>Estágio mental:</b><br>
+      “Ok… isso pode funcionar. Mas será que funciona pra mim?”
 
-    MOFU não vende.<br>
-    MOFU faz sentido.
+      <hr>
 
-    <br><br>
-    <strong>Estágio mental do público</strong><br>
-    “Ok… isso pode funcionar. Mas será que funciona pra mim?”
+      <b>Objetivo real:</b><br>
+      Justificar racionalmente a solução, reduzindo risco mental
+      sem pedir compra.
 
-    <br><br>
-    <strong>OBJETIVO REAL DO MOFU</strong><br>
-    Justificar racionalmente a solução, sem pedir compra.
+      <hr>
 
-    <br><br>
-    <strong>FORMATO IDEAL DE CRIATIVO</strong><br>
-    Vídeos de 30 a 60 segundos<br>
-    Reforço da dor já reconhecida<br>
-    Introdução do mecanismo<br>
-    Comparação implícita<br>
-    Micro prova<br>
-    CTA de aprofundamento
+      <b>Formato ideal:</b>
+      <ul>
+        <li>Vídeos de 30 a 60s</li>
+        <li>Explicação do mecanismo</li>
+        <li>Comparação implícita</li>
+        <li>Micro prova</li>
+        <li>CTA de aprofundamento</li>
+      </ul>
+
+      <p class="highlight">
+        CTA recomendado: “Entenda como funciona”
+      </p>
+
+      <p class="muted">
+        Métricas-chave: 50–75% de vídeo • CTR • Tempo médio
+      </p>
+
+      <p><b>Frase do manual:</b><br>
+      “MOFU existe para explicar o que o público já começou a suspeitar.”
+      </p>
     </div>
     """, unsafe_allow_html=True)
 
-# ==================================================
+# ======================================================
 # BOFU
-# ==================================================
-with tabs[5]:
+# ======================================================
+with st.expander("🔴 ETAPA 3 — BOFU (Decisão + Conversão)"):
     st.markdown("""
     <div class="card">
-    <div class="title">🔹 ETAPA 3 — BOFU (DECISÃO + CONVERSÃO)</div>
+      <b>Estágio mental:</b><br>
+      “Eu já entendi. Agora só não quero errar.”
 
-    BOFU não é persuasão.<br>
-    BOFU é confirmação.
+      <hr>
 
-    <br><br>
-    <strong>Estágio mental do público</strong><br>
-    “Eu já entendi. Agora só não quero errar.”
+      <b>Objetivo real:</b><br>
+      Facilitar a decisão reduzindo medo, risco percebido
+      e insegurança pós-compra.
 
-    <br><br>
-    <strong>OBJETIVO REAL DO BOFU</strong><br>
-    Facilitar a decisão reduzindo risco percebido, medo de arrependimento,
-    dúvida de qualidade e insegurança pós-compra.
+      <hr>
 
-    <br><br>
-    <strong>FORMATO IDEAL DE CRIATIVO</strong><br>
-    Vídeos de 15 a 40 segundos<br>
-    Confirmação do problema<br>
-    Prova real<br>
-    Validação social ou técnica<br>
-    Oferta clara<br>
-    CTA de ação
+      <b>Formato ideal:</b>
+      <ul>
+        <li>Vídeos de 15 a 40s</li>
+        <li>Prova real e social</li>
+        <li>Validação técnica</li>
+        <li>Oferta clara</li>
+        <li>CTA direto</li>
+      </ul>
+
+      <p class="highlight">
+        CTA recomendado: “Comprar agora”
+      </p>
+
+      <p class="muted">
+        Métricas-chave: CPA • ROAS • Taxa de conversão
+      </p>
+
+      <p><b>Frase do manual:</b><br>
+      “BOFU não empurra a venda. Ele dá segurança para decidir.”
+      </p>
     </div>
     """, unsafe_allow_html=True)
 
-# ==================================================
-# RESUMO + CRIATIVOS
-# ==================================================
-with tabs[6]:
-    st.markdown("""
-    <div class="card">
-    <div class="title">🔥 RESUMO FINAL DO FUNIL</div>
+# ======================================================
+# RESUMO FINAL
+# ======================================================
+st.markdown("""
+<div class="card">
+  <div class="title">🔥 Resumo Final — Mente do Público</div>
 
-    TOFU: “Isso existe?”<br>
-    MOFU: “Isso faz sentido?”<br>
-    BOFU: “Posso confiar?”
+  <ul>
+    <li><b>TOFU:</b> “Isso existe?”</li>
+    <li><b>MOFU:</b> “Isso faz sentido?”</li>
+    <li><b>BOFU:</b> “Posso confiar?”</li>
+  </ul>
 
-    <br><br>
-    Quando seus anúncios seguem esse raciocínio,
-    a escala deixa de ser tentativa e vira consequência.
-
-    <br><br>
-    🔢 31 criativos organizados por função mental.
-    </div>
-    """, unsafe_allow_html=True)
+  <p class="highlight">
+    Quando seus anúncios seguem esse raciocínio, a escala deixa de ser tentativa
+    e vira consequência.
+  </p>
+</div>
+""", unsafe_allow_html=True)
