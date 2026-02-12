@@ -353,7 +353,7 @@ Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
 elif section == "🔢 Criativos":
 
     # 🔒 APENAS A DESCRIÇÃO FICA FECHADA
-    with st.expander("🔢 Criativos", expanded=False):
+    with st.expander("🔢 31 Criativos — Organizados por Função Mental", expanded=False):
         st.markdown("""
 <div class="card">
 <div class="title">🔢 31 Criativos — Organizados por Função Mental</div>
