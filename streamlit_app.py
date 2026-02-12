@@ -8,8 +8,11 @@ st.set_page_config(
 st.title("🧠 Manual Mental de Funil de Vendas")
 
 st.markdown("""
-Este app não é sobre funis bonitos.  
-É sobre **replicar o processo mental real do comprador**.
+Este app existe para transformar seu manual em um sistema visual.
+
+**TOFU** desperta  
+**MOFU** organiza  
+**BOFU** confirma
 """)
 
-st.info("Use o menu lateral para navegar entre as etapas do funil.")
+st.info("Use o menu lateral para navegar.")
