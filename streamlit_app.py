@@ -65,129 +65,145 @@ li { margin-bottom: 0.35rem; }
 """, unsafe_allow_html=True)
 
 # ======================================================
+# SIDEBAR — NAVEGAÇÃO
+# ======================================================
+st.sidebar.title("🧠 Navegação Mental")
+
+section = st.sidebar.radio(
+    "Escolha a seção:",
+    [
+        "📘 Princípio Central",
+        "🧠 Mente do Público",
+        "🚨 Erro de Escala",
+        "📏 Régua de Consciência",
+        "🔁 Relação das Etapas",
+        "🔹 TOFU",
+        "🟡 MOFU",
+        "🔴 BOFU",
+        "🔢 Criativos — Execução",
+        "🔥 Resumo Final",
+    ]
+)
+
+# ======================================================
 # HEADER
 # ======================================================
 st.title("🧠 Manual Mental de Funil de Vendas")
 st.caption("Escala não é tráfego. É psicologia aplicada.")
 
-# ======================================================
-# PRINCÍPIO CENTRAL
-# ======================================================
-st.markdown("""
-<div class="card">
-<div class="title">🧠 Princípio Central</div>
+if section == "📘 Princípio Central":
+    st.markdown("""
+    <div class="card">
+    <div class="title">🧠 Princípio Central</div>
 
-O fluxo de escala só funciona quando replica o
-<span class="highlight">processo mental real do público</span>.
+    O fluxo de escala só funciona quando replica o
+    <span class="highlight">processo mental real do público</span>.
 
-<hr>
+    <hr>
 
-<b>Escala não é:</b>
-<ul>
-<li>Aumentar orçamento</li>
-<li>Duplicar conjunto</li>
-<li>Abrir LAL aleatório</li>
-</ul>
+    <b>Escala não é:</b>
+    <ul>
+    <li>Aumentar orçamento</li>
+    <li>Duplicar conjunto</li>
+    <li>Abrir LAL aleatório</li>
+    </ul>
 
-<b>Escala é ampliar algo que já está coerente com a mente do comprador.</b>
+    <b>Escala é ampliar algo que já está coerente com a mente do comprador.</b>
 
-<hr>
+    <hr>
 
-<b>Timing mental correto:</b>
-<ul>
-<li>TOFU leve e escalável</li>
-<li>MOFU lógico e educativo</li>
-<li>BOFU forte, sem contaminar o funil</li>
-</ul>
+    <b>Timing mental correto:</b>
+    <ul>
+    <li>TOFU leve e escalável</li>
+    <li>MOFU lógico e educativo</li>
+    <li>BOFU forte, sem contaminar o funil</li>
+    </ul>
 
-<b>👉 Isso é tráfego de escala, não de tentativa.</b>
-</div>
-""", unsafe_allow_html=True)
+    <b>👉 Isso é tráfego de escala, não de tentativa.</b>
+    </div>
+    """, unsafe_allow_html=True)
 
-# ======================================================
-# COMO A MENTE FUNCIONA
-# ======================================================
-st.markdown("""
-<div class="card">
-<div class="title">1️⃣ Como a mente do público funciona</div>
 
-<ul>
-<li>Desconhecimento</li>
-<li>Identificação do problema</li>
-<li>Comparação / ceticismo</li>
-<li>Confiança</li>
-<li>Decisão</li>
-</ul>
+elif section == "🧠 Mente do Público":
+    st.markdown("""
+    <div class="card">
+    <div class="title">1️⃣ Como a mente do público funciona</div>
 
-<p class="highlight">
-O Meta Ads só escala quando seus anúncios acompanham essa progressão.
-</p>
-</div>
-""", unsafe_allow_html=True)
+    <ul>
+    <li>Desconhecimento</li>
+    <li>Identificação do problema</li>
+    <li>Comparação / ceticismo</li>
+    <li>Confiança</li>
+    <li>Decisão</li>
+    </ul>
 
-# ======================================================
-# ERRO MAIS COMUM
-# ======================================================
-st.markdown("""
-<div class="card">
-<div class="title">2️⃣ O erro mais comum na escala</div>
+    <p class="highlight">
+    O Meta Ads só escala quando seus anúncios acompanham essa progressão.
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-<ul>
-<li>Público aberto</li>
-<li>Criativo de oferta</li>
-<li>“Compre agora”</li>
-<li>Aumenta orçamento</li>
-<li>ROAS cai</li>
-<li>CPM sobe</li>
-<li>Algoritmo perde sinal</li>
-</ul>
 
-<p class="highlight">
-Isso acontece porque a mente ainda não está pronta.
-</p>
-</div>
-""", unsafe_allow_html=True)
+elif section == "🚨 Erro de Escala":
+    st.markdown("""
+    <div class="card">
+    <div class="title">2️⃣ O erro mais comum na escala</div>
 
-# ======================================================
-# RÉGUA DE CONSCIÊNCIA
-# ======================================================
-st.markdown("""
-<div class="card">
-<div class="title">3️⃣ Régua de Consciência</div>
+    <ul>
+    <li>Público aberto</li>
+    <li>Criativo de oferta</li>
+    <li>“Compre agora”</li>
+    <li>Aumenta orçamento</li>
+    <li>ROAS cai</li>
+    <li>CPM sobe</li>
+    <li>Algoritmo perde sinal</li>
+    </ul>
 
-<ul>
-<li>❓ Esse criativo pede decisão ou curiosidade?</li>
-<li>🧠 Ele explica o “por quê” ou apenas mostra que existe?</li>
-<li>⚠️ Ele aumenta ou reduz risco mental?</li>
-<li>⏱️ Quanto esforço cognitivo exige?</li>
-</ul>
-</div>
-""", unsafe_allow_html=True)
+    <p class="highlight">
+    Isso acontece porque a mente ainda não está pronta.
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-# ======================================================
-# RELAÇÃO ENTRE AS ETAPAS
-# ======================================================
-st.markdown("""
-<div class="card">
-<div class="title">🔁 Relação entre as etapas</div>
 
-<ul>
-<li><b>TOFU</b> desperta</li>
-<li><b>MOFU</b> organiza</li>
-<li><b>BOFU</b> confirma</li>
-</ul>
+elif section == "📏 Régua de Consciência":
+    st.markdown("""
+    <div class="card">
+    <div class="title">3️⃣ Régua de Consciência</div>
 
-<p class="highlight">
-MOFU tira objeções. BOFU tira medo.
-</p>
-</div>
-""", unsafe_allow_html=True)
+    <ul>
+    <li>❓ Esse criativo pede decisão ou curiosidade?</li>
+    <li>🧠 Ele explica o “por quê” ou apenas mostra que existe?</li>
+    <li>⚠️ Ele aumenta ou reduz risco mental?</li>
+    <li>⏱️ Quanto esforço cognitivo exige?</li>
+    </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+
+elif section == "🔁 Relação das Etapas":
+    st.markdown("""
+    <div class="card">
+    <div class="title">🔁 Relação entre as etapas</div>
+
+    <ul>
+    <li><b>TOFU</b> desperta</li>
+    <li><b>MOFU</b> organiza</li>
+    <li><b>BOFU</b> confirma</li>
+    </ul>
+
+    <p class="highlight">
+    MOFU tira objeções. BOFU tira medo.
+    </p>
+    </div>
+    """, unsafe_allow_html=True)
 
 # ======================================================
 # TOFU
 # ======================================================
-with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)", expanded=True):
-    st.markdown("""
+elif section == "🔹 TOFU":
+    with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)", expanded=True):
+        st.markdown("""
 <div class="card">
 
 <div class="micro tofu">
@@ -249,8 +265,9 @@ with st.expander("🔹 ETAPA 1 — TOFU (Primeiro Contato)", expanded=True):
 # ======================================================
 # MOFU
 # ======================================================
-with st.expander("🟡 ETAPA 2 — MOFU (Educação + Justificação)"):
-    st.markdown("""
+elif section == "🟡 MOFU":
+    with st.expander("🟡 ETAPA 2 — MOFU (Educação + Justificação)", expanded=True):
+        st.markdown("""
 <div class="card">
 
 <div class="micro mofu">
@@ -305,8 +322,9 @@ Se o MOFU estiver fraco, o BOFU fica caro.
 # ======================================================
 # BOFU
 # ======================================================
-with st.expander("🔴 ETAPA 3 — BOFU (Decisão + Conversão)"):
-    st.markdown("""
+elif section == "🔴 BOFU":
+    with st.expander("🔴 ETAPA 3 — BOFU (Decisão + Conversão)", expanded=True):
+        st.markdown("""
 <div class="card">
 
 <div class="micro bofu">
@@ -367,10 +385,12 @@ Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
 </div>
 """, unsafe_allow_html=True)
 
+
 # ======================================================
-# CRIATIVOS — ORGANIZADOS POR FUNÇÃO MENTAL
+# CRIATIVOS — EXECUÇÃO
 # ======================================================
-st.markdown("""
+elif section == "🔢 Criativos — Execução":
+    st.markdown("""
 <div class="card">
 <div class="title">🔢 31 Criativos — Organizados por Função Mental</div>
 
@@ -381,10 +401,10 @@ Aqui, cada criativo existe por um <b>motivo mental específico</b>.
 </div>
 """, unsafe_allow_html=True)
 
-# ======================================================
-# TOFU | FLEXLIVE
-# ======================================================
-st.markdown("""
+    # ======================================================
+    # TOFU | FLEXLIVE
+    # ======================================================
+    st.markdown("""
 <div class="card">
 <div class="micro tofu">
 <div class="micro-title">🔵 TOFU | FLEXLIVE — 10 Criativos</div>
@@ -436,10 +456,10 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ======================================================
-# MOFU | FLEXLIVE
-# ======================================================
-st.markdown("""
+    # ======================================================
+    # MOFU | FLEXLIVE
+    # ======================================================
+    st.markdown("""
 <div class="card">
 <div class="micro mofu">
 <div class="micro-title">🟡 MOFU | FLEXLIVE — 12 Criativos</div>
@@ -493,10 +513,10 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ======================================================
-# BOFU | FLEXLIVE
-# ======================================================
-st.markdown("""
+    # ======================================================
+    # BOFU | FLEXLIVE
+    # ======================================================
+    st.markdown("""
 <div class="card">
 <div class="micro bofu">
 <div class="micro-title">🔴 BOFU | FLEXLIVE — 9 Criativos</div>
@@ -562,10 +582,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-# ======================================================
-# RESUMO FINAL
-# ======================================================
-st.markdown("""
+elif section == "🔥 Resumo Final":
+    st.markdown("""
+
 <div class="card">
 <div class="title">🔥 Resumo Final — Mente do Público</div>
 
