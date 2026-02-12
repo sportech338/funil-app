@@ -394,65 +394,126 @@ elif section == "📘 Fundamentos":
 # 🔵 TOFU
 # ======================================================
 elif section == "🔵 TOFU":
-    tab1, tab2 = st.tabs(["📌 Resumo (rápido)", "🧱 Estrutura (modelo)"])
 
+    # ---------- RESUMO FIXO (sempre visível) ----------
+    st.markdown("""
+<div class="card tofu">
+<div class="title">🔵 TOFU — Primeiro Contato</div>
+
+<b>Função mental:</b><br>
+“Isso existe… e talvez seja pra mim.”
+
+<hr>
+
+<b>Objetivo:</b><br>
+Gerar curiosidade sem exigir decisão.
+
+<hr>
+
+<b>CTA:</b> Saiba mais<br>
+<b>Métricas:</b> ThruPlay · 50% vídeo · CPM
+
+<hr>
+
+<span class="highlight">
+Produto aparece como parte da rotina, não como argumento de venda.
+</span>
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- ABAS INTERNAS ----------
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "🧠 Essência",
+        "🧱 Estrutura",
+        "🎬 Criativos",
+        "🚫 Erros & Papel"
+    ])
+
+    # ---------- ESSÊNCIA ----------
     with tab1:
-        card_stage(
-            stage_name="🔵 TOFU — Primeiro contato",
-            stage_class="tofu",
-            o_que_e="Apresentar o produto sem exigir decisão. Não é esconder o produto.",
-            funcao_mental="“Isso existe… e talvez seja pra mim.”",
-            objetivo_real="Criar identificação com a rotina diária, com o produto aparecendo breve, natural e não invasivo.",
-            formato="Vídeos curtos (até 20s).",
-            estrutura=[
-                "Situação cotidiana real",
-                "Dor silenciosa (sem exagero)",
-                "Produto aparece como parte da rotina",
-                "Micro curiosidade",
-                "CTA leve",
-            ],
-            cta="“Saiba mais”",
-            tipos=[
-                "Uso rápido no dia a dia",
-                "Close sutil do produto (sem explicar tudo)",
-                "Rotina real (trabalho, treino, deslocamento)",
-                "“Eu comecei a usar por causa disso…”",
-                "Produto resolve sem ser protagonista (problema é o foco)",
-            ],
-            metricas=["ThruPlay", "50% de vídeo", "CPM saudável"],
-            papel=[
-                "Gera públicos quentes",
-                "Cria curiosos compradores",
-                "Planta dúvida nos céticos",
-                "Alimenta MOFU e BOFU",
-                "Mantém CPM baixo em escala",
-            ],
-            erros=[
-                "Mostrar demais (gera rejeição)",
-                "Esconder totalmente (perde sinal de qualificação)",
-                "Puxar oferta / desconto cedo",
-            ],
-            frase="No TOFU, o produto aparece como parte da rotina, não como argumento de venda.",
-        )
+        st.markdown("""
+<div class="card">
+<b>O que é:</b><br>
+Apresentar o produto sem exigir decisão.<br>
+<b>Não</b> é esconder o produto.
 
+<hr>
+
+<b>Estágio mental:</b><br>
+Usuário ainda não quer comprar, mas já consegue:
+<ul>
+<li>Se enxergar no cenário</li>
+<li>Reconhecer a dor</li>
+<li>Aceitar que a solução existe</li>
+</ul>
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- ESTRUTURA ----------
     with tab2:
         st.markdown("""
 <div class="card">
-<div class="title">🧱 Modelo pronto (cole e adapte)</div>
-<div class="muted">
-<b>Script TOFU em 5 linhas:</b>
-<ol>
-<li>Mostre uma rotina real</li>
-<li>Traga a dor sem exagero</li>
-<li>Deixe o produto aparecer rápido (sem explicar)</li>
-<li>Crie uma micro curiosidade</li>
-<li>CTA leve: “Saiba mais”</li>
-</ol>
-</div>
+<b>Formato ideal:</b><br>
+Vídeos curtos (até 20s)
+
 <hr>
-<span class="highlight">Meta: atenção qualificada (não venda).</span>
+
+<b>Estrutura mental correta:</b>
+<ol>
+<li>Situação cotidiana real</li>
+<li>Dor silenciosa (sem exagero)</li>
+<li>Produto aparece como parte da rotina</li>
+<li>Micro curiosidade</li>
+<li>CTA leve</li>
+</ol>
+
+<hr>
+
+<span class="highlight">
+Meta: atenção qualificada (não venda).
+</span>
 </div>
 """, unsafe_allow_html=True)
+
+    # ---------- CRIATIVOS ----------
+    with tab3:
+        st.markdown("""
+<div class="card">
+<b>Tipos de criativo TOFU:</b>
+<ul>
+<li>Uso rápido no dia a dia</li>
+<li>Close sutil do produto (sem explicar tudo)</li>
+<li>Rotina real (trabalho, treino, deslocamento)</li>
+<li>“Eu comecei a usar por causa disso…”</li>
+<li>Situações onde o produto resolve sem ser protagonista</li>
+</ul>
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- ERROS & PAPEL ----------
+    with tab4:
+        st.markdown("""
+<div class="card">
+<b>Erros comuns:</b>
+<ul>
+<li>Mostrar demais (gera rejeição)</li>
+<li>Esconder totalmente (perde qualificação)</li>
+<li>Puxar oferta ou desconto cedo</li>
+</ul>
+
+<hr>
+
+<b>Papel do TOFU na escala:</b>
+<ul>
+<li>Gera públicos quentes</li>
+<li>Cria curiosos compradores</li>
+<li>Planta dúvida nos céticos</li>
+<li>Alimenta MOFU e BOFU</li>
+<li>Mantém CPM baixo em escala</li>
+</ul>
+</div>
+""", unsafe_allow_html=True)
+
 
 # ======================================================
 # 🟡 MOFU
