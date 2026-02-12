@@ -4,7 +4,8 @@ import streamlit as st
 # CONFIGURAÇÃO DA PÁGINA
 # ======================================================
 st.set_page_config(
-    page_title="Manual Mental de Funil de Vendas",
+    page_title="Funil Mental",
+    page_icon="🧠",
     layout="wide",
 )
 
