@@ -91,17 +91,17 @@ st.caption("Escala não é tráfego. É psicologia aplicada.")
 if section == "📘 Fundamentos":
 
     tab_principio, tab_funil = st.tabs([
-        "🧠 Princípio Central",
-        "🧠 Arquitetura Mental"
+        "1️⃣ Princípio Central",
+        "📐 Arquitetura Mental"
     ])
 
     # ==================================================
-    # 🧠 PRINCÍPIO CENTRAL
+    # 1️⃣ PRINCÍPIO CENTRAL
     # ==================================================
     with tab_principio:
         st.markdown("""
 <div class="card">
-<div class="title">🧠 Princípio Central</div>
+<div class="title">1️⃣ Princípio Central</div>
 
 O fluxo de escala só funciona quando replica o
 <span class="highlight">processo mental real do público</span>.
@@ -131,12 +131,12 @@ O fluxo de escala só funciona quando replica o
 """, unsafe_allow_html=True)
 
     # ==================================================
-    # 🧠 ARQUITETURA MENTAL — MODELO PSICOLÓGICO
+    # 📐 ARQUITETURA MENTAL — MODELO PSICOLÓGICO
     # ==================================================
     with tab_funil:
         st.markdown("""
 <div class="card">
-<div class="title">🧠 Progressão Psicológica</div>
+<div class="title">📐 Progressão Psicológica</div>
 
 <ul>
 <li>Desconhecimento</li>
