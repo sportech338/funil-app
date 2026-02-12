@@ -75,7 +75,7 @@ section = st.sidebar.radio(
         "📘 Fundamentos",
         "🌪️ Fluxo do Funil",
         "🎥 Criativos",
-        "🔥 Resumo Final",
+        "📊 Diagnóstico",
     ]
 )
 
