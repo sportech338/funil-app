@@ -552,9 +552,11 @@ Aqui, cada criativo existe por um <b>motivo mental específico</b>.
 </ul>
 
 <p class="muted">
+📌 Público: View 50% TOFU · Engajamento<br>
 📌 Função mental: “ok, agora faz sentido”<br>
 📌 Uso: escalar compreensão, não conversão
 </p>
+
 
 <hr>
 
@@ -573,9 +575,11 @@ Aqui, cada criativo existe por um <b>motivo mental específico</b>.
 </ul>
 
 <p class="muted">
+📌 Público: View 75% MOFU · PageView<br>
 📌 Função mental: “isso funciona para pessoas como eu”<br>
 📌 Uso: remarketing + públicos quentes
 </p>
+
 </div>
 """, unsafe_allow_html=True)
 
@@ -650,8 +654,11 @@ Aqui, cada criativo existe por um <b>motivo mental específico</b>.
 
 
 elif section == "📊 Diagnóstico":
-    st.markdown("""
 
+    # ======================================================
+    # VISÃO GERAL — MENTE DO PÚBLICO
+    # ======================================================
+    st.markdown("""
 <div class="card">
 <div class="title">📊 Diagnóstico — Mente do Público</div>
 
@@ -664,6 +671,62 @@ elif section == "📊 Diagnóstico":
 <p class="highlight">
 Quando seus anúncios seguem esse raciocínio,
 a escala deixa de ser tentativa e vira consequência.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+    # ======================================================
+    # CHECKLIST DE ALINHAMENTO DO FUNIL
+    # ======================================================
+    st.markdown("### 🎯 Análise do Funil")
+
+    tofu_ok = st.checkbox("Meu TOFU gera curiosidade sem vender")
+    mofu_ok = st.checkbox("Meu MOFU educa e reduz objeções")
+    bofu_ok = st.checkbox("Meu BOFU transmite segurança para decidir")
+
+    if tofu_ok and mofu_ok and bofu_ok:
+        st.success("🚀 Funil mentalmente alinhado. Escalar agora é seguro.")
+    elif not tofu_ok:
+        st.error("❌ O problema começa no TOFU. Não escale ainda.")
+    elif not mofu_ok:
+        st.warning("⚠️ MOFU fraco. BOFU vai ficar caro.")
+    else:
+        st.info("🔎 BOFU precisa de ajustes finos.")
+
+    # ======================================================
+    # CRITÉRIOS DE CORTE — ESCALA SEGURA
+    # ======================================================
+    st.markdown("""
+<div class="card">
+<div class="title">🪓 Critérios de Corte por Etapa</div>
+
+<b>🔵 TOFU — desligar se:</b>
+<ul>
+<li>CPM sobe continuamente</li>
+<li>ThruPlay abaixo da média do conjunto</li>
+<li>CTR irrelevante</li>
+</ul>
+
+<hr>
+
+<b>🟡 MOFU — desligar se:</b>
+<ul>
+<li>50% de vídeo baixo</li>
+<li>Tempo médio fraco</li>
+<li>CTR não evolui mesmo com frequência baixa</li>
+</ul>
+
+<hr>
+
+<b>🔴 BOFU — desligar se:</b>
+<ul>
+<li>CPA acima do limite por vários dias</li>
+<li>ROAS instável com frequência alta</li>
+<li>Conversões concentradas em poucos dias</li>
+</ul>
+
+<p class="highlight">
+Criativo ruim drena o funil inteiro.
 </p>
 </div>
 """, unsafe_allow_html=True)
