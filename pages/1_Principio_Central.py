@@ -1,25 +1,26 @@
 import streamlit as st
 
-st.title("🧠 Princípio Central do Funil de Escala")
+st.title("🧠 Princípio Central")
 
 st.markdown("""
+O fluxo de escala só funciona quando replica o processo mental real do público-alvo.
+
 ### Escala não é:
-- Aumentar orçamento  
-- Duplicar conjunto  
-- Abrir LAL aleatório  
+- aumentar orçamento  
+- duplicar conjunto  
+- abrir LAL aleatório  
 
 ### Escala é:
-Ampliar algo que já está coerente com a mente do comprador.
+**Ampliar algo que já está coerente com a mente do comprador.**
 """)
 
 st.divider()
 
-st.subheader("⏱️ O que realmente importa: timing mental")
-
+st.subheader("⏱️ Timing mental")
 st.markdown("""
-- **TOFU** → Leve, escalável  
-- **MOFU** → Lógico e educativo  
-- **BOFU** → Forte, sem contaminar o funil  
+- **TOFU** leve e escalável  
+- **MOFU** lógico e educativo  
+- **BOFU** forte, sem contaminar o funil  
 """)
 
 st.success("👉 Isso é tráfego de escala, não de tentativa.")
