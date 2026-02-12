@@ -368,6 +368,201 @@ Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
 """, unsafe_allow_html=True)
 
 # ======================================================
+# CRIATIVOS — ORGANIZADOS POR FUNÇÃO MENTAL
+# ======================================================
+st.markdown("""
+<div class="card">
+<div class="title">🔢 31 Criativos — Organizados por Função Mental</div>
+
+<p class="muted">
+Esta seção transforma o manual em execução.<br>
+Aqui, cada criativo existe por um <b>motivo mental específico</b>.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+# ======================================================
+# TOFU | FLEXLIVE
+# ======================================================
+st.markdown("""
+<div class="card">
+<div class="micro tofu">
+<div class="micro-title">🔵 TOFU | FLEXLIVE — 10 Criativos</div>
+<div class="micro-desc">Consciência: “Isso existe / talvez seja pra mim”</div>
+</div>
+
+<b>CTA:</b> Saiba mais<br>
+<b>Objetivo:</b> curiosidade + identificação
+
+<hr>
+
+<div class="micro tofu">
+<div class="micro-title">🔵 TOFU PURO — DESCOBERTA</div>
+<div class="micro-desc">CPM baixo · escala longa · público frio</div>
+</div>
+
+<ul>
+<li>07 — Apresentação simples do produto</li>
+<li>17 — Uso durante atividade</li>
+<li>24 — Rotina ativa</li>
+<li>25 — Lista objetiva de benefícios</li>
+<li>26 — Mensagens de impacto curtas</li>
+<li>29 — Rotina simples (10 segundos)</li>
+</ul>
+
+<p class="muted">
+📌 Função mental: apresentar o produto sem exigir decisão<br>
+📌 Uso: escalar orçamento
+</p>
+
+<hr>
+
+<div class="micro tofu">
+<div class="micro-title">🔁 TOFU HÍBRIDO — DESCOBERTA + PROVA</div>
+<div class="micro-desc">Bom para remarketing leve e públicos de vídeo</div>
+</div>
+
+<ul>
+<li>10 — Primeira experiência emocional</li>
+<li>11 — Alívio rápido (nota 8 → 2)</li>
+<li>12 — Antes/depois simples</li>
+<li>18 — Público 45+ (sem medo, sem oferta)</li>
+</ul>
+
+<p class="muted">
+📌 Função mental: acelerar curiosos já impactados<br>
+📌 Uso: RMK leve / públicos de engajamento
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+# ======================================================
+# MOFU | FLEXLIVE
+# ======================================================
+st.markdown("""
+<div class="card">
+<div class="micro mofu">
+<div class="micro-title">🟡 MOFU | FLEXLIVE — 12 Criativos</div>
+<div class="micro-desc">Consciência: “Isso faz sentido / pode funcionar pra mim”</div>
+</div>
+
+<b>CTA:</b> Saiba mais / Entenda como funciona<br>
+<b>Objetivo:</b> justificar · comparar · reduzir objeção
+
+<hr>
+
+<div class="micro mofu">
+<div class="micro-title">🟡 MOFU PURO — EDUCAÇÃO</div>
+<div class="micro-desc">Organiza o raciocínio · reduz ceticismo</div>
+</div>
+
+<ul>
+<li>02 — Anti-inflamatório vs natural</li>
+<li>03 — Pesquisa + mecanismo + ingredientes</li>
+<li>04 — Dor crônica + terapia (sem desconto)</li>
+<li>16 — Comparação com joelheira</li>
+<li>22 — Profissional em pé o dia todo</li>
+<li>28 — Passo a passo (sem pressão)</li>
+</ul>
+
+<p class="muted">
+📌 Função mental: “ok, agora faz sentido”<br>
+📌 Uso: escalar compreensão, não conversão
+</p>
+
+<hr>
+
+<div class="micro mofu">
+<div class="micro-title">🟠 MOFU — VALIDAÇÃO | PRÉ-DECISÃO</div>
+<div class="micro-desc">Reduz medo de errar · prepara BOFU</div>
+</div>
+
+<ul>
+<li>05 — Evolução em dias (sem urgência)</li>
+<li>06 — Antes/depois + segredo</li>
+<li>08 — Dor severa + alternativa à cirurgia</li>
+<li>15 — Caso real + validação profissional</li>
+<li>19 — Osso com osso + indicação técnica</li>
+<li>21 — Medicamentos vs adesivo</li>
+</ul>
+
+<p class="muted">
+📌 Função mental: “isso funciona para pessoas como eu”<br>
+📌 Uso: remarketing + públicos quentes
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+# ======================================================
+# BOFU | FLEXLIVE
+# ======================================================
+st.markdown("""
+<div class="card">
+<div class="micro bofu">
+<div class="micro-title">🔴 BOFU | FLEXLIVE — 9 Criativos</div>
+<div class="micro-desc">Consciência: “Quero resolver agora”</div>
+</div>
+
+<b>CTA:</b> Comprar / Garantir<br>
+<b>Objetivo:</b> segurança + decisão
+
+<hr>
+
+<div class="micro bofu">
+<div class="micro-title">🔴 BOFU — DECISÃO</div>
+<div class="micro-desc">Conversão direta · eficiência</div>
+</div>
+
+<ul>
+<li>13 — Benefícios claros + oferta</li>
+<li>20 — Oferta direta + urgência</li>
+<li>23 — Rotina 2 passos + desconto</li>
+<li>27 — Prova familiar + desconto</li>
+</ul>
+
+<p class="muted">
+📌 Função mental: facilitar a decisão agora<br>
+📌 Uso: conversão direta
+</p>
+
+<hr>
+
+<div class="micro bofu">
+<div class="micro-title">🔴 BOFU — DECISÃO | NARRATIVA LONGA</div>
+<div class="micro-desc">Remarketing profundo · baixa frequência</div>
+</div>
+
+<ul>
+<li>01 — História longa + médico + cirurgia</li>
+<li>09 — Dor extrema + testemunho + garantia</li>
+</ul>
+
+<p class="muted">
+📌 Função mental: remover último freio emocional<br>
+📌 Uso: RMK 75%+ vídeo / PageView
+</p>
+
+<hr>
+
+<div class="micro bofu">
+<div class="micro-title">🧠 BOFU — PROVA SOCIAL</div>
+<div class="micro-desc">Confiança final</div>
+</div>
+
+<ul>
+<li>UGC Cliente (Diego)</li>
+<li>UGC Cliente (Idosa)</li>
+</ul>
+
+<p class="muted">
+📌 Função mental: “outras pessoas como eu confiam”<br>
+📌 Uso: fechamento e proteção de ROAS
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+
+# ======================================================
 # RESUMO FINAL
 # ======================================================
 st.markdown("""
