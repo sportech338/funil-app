@@ -352,6 +352,7 @@ Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
 # ======================================================
 elif section == "🔢 Criativos — Execução":
 
+with st.expander("🔢 Criativos — Execução (abrir para ver)", expanded=False):
     st.markdown("""
 <div class="card">
 <div class="title">🔢 31 Criativos — Organizados por Função Mental</div>
@@ -362,6 +363,7 @@ Aqui, cada criativo existe por um <b>motivo mental específico</b>.
 </p>
 </div>
 """, unsafe_allow_html=True)
+
 
     # ===== ABAS =====
     tab_tofu, tab_mofu, tab_bofu = st.tabs([
