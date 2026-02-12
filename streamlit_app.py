@@ -73,7 +73,7 @@ section = st.sidebar.radio(
     "Modo de navegação:",
     [
         "📘 Fundamentos",
-        "🧠 Funil Mental",
+        "🌪️ Fluxo do Funil",
         "🔢 Criativos",
         "🔥 Resumo Final",
     ]
@@ -92,7 +92,7 @@ if section == "📘 Fundamentos":
 
     tab_principio, tab_funil = st.tabs([
         "🧠 Princípio Central",
-        "🧠 Funil Mental"
+        "🧠 Arquitetura Mental"
     ])
 
     # ==================================================
@@ -131,12 +131,12 @@ O fluxo de escala só funciona quando replica o
 """, unsafe_allow_html=True)
 
     # ==================================================
-    # 🧠 FUNIL MENTAL — MODELO PSICOLÓGICO
+    # 🧠 ARQUITETURA MENTAL — MODELO PSICOLÓGICO
     # ==================================================
     with tab_funil:
         st.markdown("""
 <div class="card">
-<div class="title">🧠 Funil Mental — Progressão Psicológica</div>
+<div class="title">🧠 Arquitetura Mental — Progressão Psicológica</div>
 
 <ul>
 <li>Desconhecimento</li>
@@ -200,7 +200,7 @@ MOFU tira objeções. BOFU tira medo.
 """, unsafe_allow_html=True)
 
 
-elif section == "🧠 Funil Mental":
+elif section == "🌪️ Fluxo do Funil":
 
     tab_tofu, tab_mofu, tab_bofu = st.tabs([
         "🔵 TOFU",
