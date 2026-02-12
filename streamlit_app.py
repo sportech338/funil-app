@@ -90,10 +90,16 @@ st.caption("Escala não é tráfego. É psicologia aplicada.")
 # ======================================================
 if section == "📘 Fundamentos":
 
-    # --------------------------------------------------
-    # PRINCÍPIO CENTRAL
-    # --------------------------------------------------
-    st.markdown("""
+    tab_principio, tab_funil = st.tabs([
+        "🧠 Princípio Central",
+        "🧠 Funil Mental"
+    ])
+
+    # ==================================================
+    # 🧠 PRINCÍPIO CENTRAL
+    # ==================================================
+    with tab_principio:
+        st.markdown("""
 <div class="card">
 <div class="title">🧠 Princípio Central</div>
 
@@ -124,10 +130,11 @@ O fluxo de escala só funciona quando replica o
 </div>
 """, unsafe_allow_html=True)
 
-    # --------------------------------------------------
-    # PROGRESSÃO PSICOLÓGICA
-    # --------------------------------------------------
-    st.markdown("""
+    # ==================================================
+    # 🧠 FUNIL MENTAL — MODELO PSICOLÓGICO
+    # ==================================================
+    with tab_funil:
+        st.markdown("""
 <div class="card">
 <div class="title">🧠 Funil Mental — Progressão Psicológica</div>
 
@@ -145,10 +152,7 @@ O Meta Ads só escala quando seus anúncios acompanham essa progressão.
 </div>
 """, unsafe_allow_html=True)
 
-    # --------------------------------------------------
-    # ERRO MAIS COMUM NA ESCALA
-    # --------------------------------------------------
-    st.markdown("""
+        st.markdown("""
 <div class="card">
 <div class="title">🚨 O erro mais comum na escala</div>
 
@@ -168,10 +172,7 @@ Isso acontece porque a mente ainda não está pronta.
 </div>
 """, unsafe_allow_html=True)
 
-    # --------------------------------------------------
-    # RÉGUA DE CONSCIÊNCIA + RELAÇÃO
-    # --------------------------------------------------
-    st.markdown("""
+        st.markdown("""
 <div class="card">
 <div class="title">📏 Régua de Consciência</div>
 
