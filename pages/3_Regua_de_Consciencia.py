@@ -3,14 +3,12 @@ import streamlit as st
 st.title("📏 Régua de Consciência")
 
 st.markdown("""
-Classifique cada criativo com base em:
+Antes de subir qualquer criativo, pergunte:
 
-- ❓ Esse vídeo pede **decisão** ou **curiosidade**?
-- 🧠 Ele explica **“por quê”** ou apenas mostra **“que existe”**?
-- ⚠️ Ele **aumenta** ou **reduz risco mental**?
-- ⏱️ Quanto **esforço cognitivo** exige?
-
-Use essa régua antes de subir campanha.
+- ❓ Ele pede decisão ou curiosidade?
+- 🧠 Explica “por quê” ou só mostra “que existe”?
+- ⚠️ Aumenta ou reduz risco mental?
+- ⏱️ Quanto esforço cognitivo exige?
 """)
 
-st.info("Se o criativo não encaixa claramente em TOFU/MOFU/BOFU, ele tende a contaminar o funil.")
+st.info("Se não encaixa claramente em TOFU, MOFU ou BOFU, não escale.")
