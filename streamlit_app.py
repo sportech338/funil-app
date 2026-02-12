@@ -118,7 +118,8 @@ if section == "📘 Fundamentos":
     """, unsafe_allow_html=True)
 
 
-elif section == "🧠 Funil — Estrutura Mental":
+elif section == "🧠 Funil":
+    st.markdown("## 🧠 Funil — Estrutura Mental")
 
     tab1, tab2, tab3 = st.tabs([
         "🧠 Mente do Público",
