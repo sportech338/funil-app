@@ -519,62 +519,137 @@ Meta: atenção qualificada (não venda).
 # 🟡 MOFU
 # ======================================================
 elif section == "🟡 MOFU":
-    tab1, tab2 = st.tabs(["📌 Resumo (rápido)", "🧱 Estrutura (modelo)"])
 
+    # ---------- RESUMO FIXO (sempre visível) ----------
+    st.markdown("""
+<div class="card mofu">
+<div class="title">🟡 MOFU — Educação & Justificação</div>
+
+<b>Função mental:</b><br>
+“Ok… isso pode funcionar. Mas será que funciona pra mim?”
+
+<hr>
+
+<b>Objetivo:</b><br>
+Organizar o raciocínio e reduzir ceticismo.
+
+<hr>
+
+<b>CTA:</b> Entenda como funciona<br>
+<b>Métricas:</b> 50–75% vídeo · CTR · Tempo médio
+
+<hr>
+
+<span class="highlight">
+MOFU não vende. MOFU faz sentido.
+</span>
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- ABAS INTERNAS ----------
+    tab1, tab2, tab3, tab4 = st.tabs([
+        "🧠 Essência",
+        "🧱 Estrutura",
+        "🎬 Criativos",
+        "🚫 Erros & Papel"
+    ])
+
+    # ---------- ESSÊNCIA ----------
     with tab1:
-        card_stage(
-            stage_name="🟡 MOFU — Educação + justificação",
-            stage_class="mofu",
-            o_que_e="MOFU não vende. MOFU faz sentido (organiza o pensamento de quem ficou curioso).",
-            funcao_mental="“Ok… pode funcionar. Mas será que funciona pra mim?”",
-            objetivo_real="Justificar racionalmente a solução sem pedir compra: explicar o porquê, mostrar o como (sem entregar tudo), desmontar objeções silenciosas.",
-            formato="Vídeos de 30 a 60s (tempo suficiente para raciocínio, não discurso).",
-            estrutura=[
-                "Reforço da dor já reconhecida",
-                "Introdução do mecanismo",
-                "Comparação implícita",
-                "Micro prova",
-                "CTA de aprofundamento",
-            ],
-            cta="“Entenda como funciona” / “Veja por que funciona”",
-            tipos=[
-                "Educacional (base): dores, erros comuns, conceitos (ex.: compressão ≠ estabilização)",
-                "Mecanismo: o que acontece no corpo / no uso",
-                "Comparação: tradicional × correto; errado × certo; genérico × técnico",
-                "Demonstração parcial: close técnico + detalhe funcional + movimento real (sem revelar tudo)",
-            ],
-            metricas=["50%–75% de vídeo", "CTR", "Tempo médio de visualização"],
-            papel=[
-                "Transforma curiosos em interessados",
-                "Filtra compradores reais",
-                "Prepara BOFU para converter barato",
-                "Reduz objeções no checkout",
-                "Aumenta LTV",
-            ],
-            erros=[
-                "Virar oferta/urgência (contamina e encarece BOFU)",
-                "Explicar demais e cansar (vira discurso)",
-                "Prometer (em vez de justificar)",
-            ],
-            frase="MOFU existe para explicar o que o público já começou a suspeitar.",
-        )
+        st.markdown("""
+<div class="card">
+<b>O que é:</b><br>
+MOFU organiza o pensamento de quem já ficou curioso no TOFU.
 
+<hr>
+
+<b>Estágio mental:</b><br>
+Aqui surgem:
+<ul>
+<li>Ceticismo</li>
+<li>Comparação</li>
+<li>Busca por lógica</li>
+<li>Medo de errar na escolha</li>
+</ul>
+
+<hr>
+
+<b>Papel central:</b><br>
+Reduzir risco mental, não convencer.
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- ESTRUTURA ----------
     with tab2:
         st.markdown("""
 <div class="card">
-<div class="title">🧱 Modelo MOFU (rápido e lógico)</div>
-<div class="muted">
-<b>Estrutura em 5 blocos:</b>
-<ol>
-<li>Reforça a dor (sem dramatizar)</li>
-<li>Apresenta o mecanismo (o “por quê”)</li>
-<li>Compara (sem citar concorrente)</li>
-<li>Micro prova (detalhe/uso/autoridade)</li>
-<li>CTA: “Entenda como funciona”</li>
-</ol>
-</div>
+<b>Formato ideal:</b><br>
+Vídeos de 30 a 60 segundos
+
 <hr>
-<span class="highlight">Meta: compreensão (não conversão).</span>
+
+<b>Estrutura mental correta:</b>
+<ol>
+<li>Reforço da dor já reconhecida</li>
+<li>Introdução do mecanismo (o “por quê”)</li>
+<li>Comparação implícita</li>
+<li>Micro prova</li>
+<li>CTA de aprofundamento</li>
+</ol>
+
+<hr>
+
+<span class="highlight">
+Meta: compreensão (não conversão).
+</span>
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- CRIATIVOS ----------
+    with tab3:
+        st.markdown("""
+<div class="card">
+<b>Tipos de criativo MOFU:</b>
+
+<ul>
+<li><b>Educacional (base):</b> dores, erros comuns, conceitos</li>
+<li><b>Mecanismo:</b> o que acontece no corpo / no uso</li>
+<li><b>Comparação:</b> tradicional × correto · errado × certo · genérico × técnico</li>
+<li><b>Demonstração parcial:</b> close técnico + detalhe funcional + movimento real</li>
+</ul>
+
+<p class="muted">
+📌 Mostre que existe engenharia.<br>
+Não entregue o produto inteiro.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+    # ---------- ERROS & PAPEL ----------
+    with tab4:
+        st.markdown("""
+<div class="card">
+<b>Erros comuns:</b>
+<ul>
+<li>Virar oferta ou urgência</li>
+<li>Explicar demais e cansar</li>
+<li>Prometer em vez de justificar</li>
+</ul>
+
+<hr>
+
+<b>Papel do MOFU na escala:</b>
+<ul>
+<li>Transforma curiosos em interessados</li>
+<li>Filtra compradores reais</li>
+<li>Prepara BOFU para converter barato</li>
+<li>Reduz objeções no checkout</li>
+<li>Aumenta LTV</li>
+</ul>
+
+<p class="muted">
+Se o MOFU estiver fraco, o BOFU fica caro.
+</p>
 </div>
 """, unsafe_allow_html=True)
 
