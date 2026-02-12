@@ -120,22 +120,25 @@ if section == "📘 Fundamentos":
 
 elif section == "🧠 Funil":
     st.markdown("## 🧠 Funil — Estrutura Mental")
+
+    st.markdown("""
     <div class="card">
     <div class="title">1️⃣ Como a mente do público funciona</div>
 
     <ul>
-    <li>Desconhecimento</li>
-    <li>Identificação do problema</li>
-    <li>Comparação / ceticismo</li>
-    <li>Confiança</li>
-    <li>Decisão</li>
+        <li>Desconhecimento</li>
+        <li>Identificação do problema</li>
+        <li>Comparação / ceticismo</li>
+        <li>Confiança</li>
+        <li>Decisão</li>
     </ul>
 
     <p class="highlight">
-    O Meta Ads só escala quando seus anúncios acompanham essa progressão.
+        O Meta Ads só escala quando seus anúncios acompanham essa progressão.
     </p>
     </div>
     """, unsafe_allow_html=True)
+
 
 
 elif section == "🚨 Erro de Escala":
