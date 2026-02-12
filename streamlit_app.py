@@ -85,6 +85,40 @@ li { margin-bottom: 0.28rem; }
 .mofu { border-left: 4px solid #f59e0b; }
 .bofu { border-left: 4px solid #ef4444; }
 
+/* ============================
+   FUNÇÃO COGNITIVA POR ETAPA
+   ============================ */
+
+/* TOFU — azul claro e limpo */
+.card.tofu {
+    border-left: 4px solid #3b82f6;
+    background: linear-gradient(
+        180deg,
+        rgba(59,130,246,0.08),
+        #0e1117 40%
+    );
+}
+
+/* MOFU — amarelo sóbrio */
+.card.mofu {
+    border-left: 4px solid #f59e0b;
+    background: linear-gradient(
+        180deg,
+        rgba(245,158,11,0.08),
+        #0e1117 40%
+    );
+}
+
+/* BOFU — vermelho discreto */
+.card.bofu {
+    border-left: 4px solid #ef4444;
+    background: linear-gradient(
+        180deg,
+        rgba(239,68,68,0.08),
+        #0e1117 40%
+    );
+}
+
 .small { font-size: 0.9rem; }
 </style>
 """, unsafe_allow_html=True)
@@ -400,7 +434,7 @@ elif section == "🔵 TOFU":
 <div class="card tofu">
 <div class="title">🔵 TOFU — Primeiro Contato</div>
 
-<b>Função mental:</b><br>
+<b>Âncora mental:</b><br>
 “Isso existe… e talvez seja pra mim.”
 
 <hr>
@@ -525,7 +559,7 @@ elif section == "🟡 MOFU":
 <div class="card mofu">
 <div class="title">🟡 MOFU — Educação & Justificação</div>
 
-<b>Função mental:</b><br>
+<b>Âncora mental:</b><br>
 “Ok… isso pode funcionar. Mas será que funciona pra mim?”
 
 <hr>
@@ -663,7 +697,7 @@ elif section == "🔴 BOFU":
 <div class="card bofu">
 <div class="title">🔴 BOFU — Decisão & Conversão</div>
 
-<b>Função mental:</b><br>
+<b>Âncora mental:</b><br>
 “Eu já entendi. Agora só não quero errar.”
 
 <hr>
