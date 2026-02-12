@@ -73,9 +73,12 @@ section = st.sidebar.radio(
     "Modo de navegação:",
     [
         "📘 Fundamentos",
-        "🧠 Funil",
-        "🔢 Criativos",
-        "🔥 Resumo",
+        "🧠 Funil Mental",
+        "🔵 TOFU",
+        "🟡 MOFU",
+        "🔴 BOFU",
+        "🔢 Criativos — Execução",
+        "🔥 Resumo Final",
     ]
 )
 
@@ -118,8 +121,7 @@ if section == "📘 Fundamentos":
     """, unsafe_allow_html=True)
 
 
-elif section == "🧠 Funil":
-    st.markdown("## 🧠 Funil — Estrutura Mental")
+elif section == "🧠 Funil Mental":
 
     tab1, tab2, tab3 = st.tabs([
         "🧠 Mente do Público",
@@ -195,62 +197,6 @@ elif section == "🧠 Funil":
         </div>
         """, unsafe_allow_html=True)
 
-
-
-elif section == "🚨 Erro de Escala":
-    st.markdown("""
-    <div class="card">
-    <div class="title">2️⃣ O erro mais comum na escala</div>
-
-    <ul>
-    <li>Público aberto</li>
-    <li>Criativo de oferta</li>
-    <li>“Compre agora”</li>
-    <li>Aumenta orçamento</li>
-    <li>ROAS cai</li>
-    <li>CPM sobe</li>
-    <li>Algoritmo perde sinal</li>
-    </ul>
-
-    <p class="highlight">
-    Isso acontece porque a mente ainda não está pronta.
-    </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-
-elif section == "📏 Régua de Consciência":
-    st.markdown("""
-    <div class="card">
-    <div class="title">3️⃣ Régua de Consciência</div>
-
-    <ul>
-    <li>❓ Esse criativo pede decisão ou curiosidade?</li>
-    <li>🧠 Ele explica o “por quê” ou apenas mostra que existe?</li>
-    <li>⚠️ Ele aumenta ou reduz risco mental?</li>
-    <li>⏱️ Quanto esforço cognitivo exige?</li>
-    </ul>
-    </div>
-    """, unsafe_allow_html=True)
-
-
-elif section == "🔁 Relação das Etapas":
-    st.markdown("""
-    <div class="card">
-    <div class="title">🔁 Relação entre as etapas</div>
-
-    <ul>
-    <li><b>TOFU</b> desperta</li>
-    <li><b>MOFU</b> organiza</li>
-    <li><b>BOFU</b> confirma</li>
-    </ul>
-
-    <p class="highlight">
-    MOFU tira objeções. BOFU tira medo.
-    </p>
-    </div>
-    """, unsafe_allow_html=True)
-
 # ======================================================
 # TOFU
 # ======================================================
@@ -315,6 +261,29 @@ elif section == "🔵 TOFU":
 </div>
 """, unsafe_allow_html=True)
 
+    st.markdown("### 🧠 Diagnóstico Mental — TOFU")
+
+    checks = [
+        "O criativo NÃO pede compra",
+        "O produto aparece como parte da rotina",
+        "Não existe oferta, desconto ou urgência",
+        "O CTA é leve (Saiba mais)",
+        "O criativo gera curiosidade, não decisão",
+    ]
+
+    score = 0
+    for c in checks:
+        if st.checkbox(c):
+            score += 1
+
+    if score == len(checks):
+        st.success("✅ TOFU PURO — pronto para escalar.")
+    elif score >= 3:
+        st.warning("⚠️ TOFU contaminado. Cuidado ao escalar.")
+    else:
+        st.error("❌ Isso NÃO é TOFU. É BOFU disfarçado.")
+
+
 # ======================================================
 # MOFU
 # ======================================================
@@ -371,6 +340,28 @@ Se o MOFU estiver fraco, o BOFU fica caro.
 </p>
 </div>
 """, unsafe_allow_html=True)
+
+    st.markdown("### 🧠 Diagnóstico Mental — MOFU")
+
+    checks = [
+        "O criativo explica o porquê da solução",
+        "Existe lógica ou mecanismo claro",
+        "Reduz medo ou ceticismo",
+        "Não força compra direta",
+        "Prepara o público para decidir depois",
+    ]
+
+    score = 0
+    for c in checks:
+        if st.checkbox(c):
+            score += 1
+
+    if score == len(checks):
+        st.success("✅ MOFU forte — BOFU tende a ficar barato.")
+    elif score >= 3:
+        st.warning("⚠️ MOFU razoável — atenção no BOFU.")
+    else:
+        st.error("❌ MOFU fraco — BOFU VAI ficar caro.")
 
 # ======================================================
 # BOFU
@@ -438,11 +429,33 @@ Se o BOFU estiver caro, o problema está antes — não é criativo de oferta.
 </div>
 """, unsafe_allow_html=True)
 
+    st.markdown("### 🧠 Diagnóstico Mental — BOFU")
+
+    checks = [
+        "A oferta está clara",
+        "Existe prova social real",
+        "O benefício principal está explícito",
+        "O CTA é direto e coerente",
+        "O criativo transmite segurança",
+    ]
+
+    score = 0
+    for c in checks:
+        if st.checkbox(c):
+            score += 1
+
+    if score == len(checks):
+        st.success("✅ BOFU pronto para converter.")
+    elif score >= 3:
+        st.warning("⚠️ BOFU ok, mas pode melhorar.")
+    else:
+        st.error("❌ BOFU fraco — o problema pode estar no MOFU.")
 
 # ======================================================
 # CRIATIVOS — EXECUÇÃO
 # ======================================================
 elif section == "🔢 Criativos — Execução":
+
     st.markdown("""
 <div class="card">
 <div class="title">🔢 31 Criativos — Organizados por Função Mental</div>
@@ -653,3 +666,18 @@ a escala deixa de ser tentativa e vira consequência.
 </p>
 </div>
 """, unsafe_allow_html=True)
+
+    st.markdown("### 🎯 Diagnóstico Final do Funil")
+
+    tofu_ok = st.checkbox("Meu TOFU gera curiosidade sem vender")
+    mofu_ok = st.checkbox("Meu MOFU educa e reduz objeções")
+    bofu_ok = st.checkbox("Meu BOFU transmite segurança para decidir")
+
+    if tofu_ok and mofu_ok and bofu_ok:
+        st.success("🚀 Funil mentalmente alinhado. Escalar agora é seguro.")
+    elif not tofu_ok:
+        st.error("❌ O problema começa no TOFU. Não escale ainda.")
+    elif not mofu_ok:
+        st.warning("⚠️ MOFU fraco. BOFU vai ficar caro.")
+    else:
+        st.info("🔎 BOFU precisa de ajustes finos.")
