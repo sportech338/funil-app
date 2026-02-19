@@ -875,8 +875,8 @@ Aqui você não organiza por “número do vídeo”. Organiza por <b>efeito men
             "Função mental: “ok, agora faz sentido” · Uso: escalar compreensão (não conversão)"
         )
         show_group(
-            "🟠 MOFU — VALIDAÇÃO | PRÉ-DECISÃO",
-            CREATIVES["MOFU — VALIDAÇÃO | PRÉ-DECISÃO"],
+            "🟠 MOFU — VALIDAÇÃO",
+            CREATIVES["MOFU — VALIDAÇÃO"],
             "Função mental: “funciona para pessoas como eu” · Uso: remarketing + públicos quentes"
         )
 
