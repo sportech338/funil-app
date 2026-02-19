@@ -133,13 +133,13 @@ CREATIVES = {
         ("24", "Rotina ativa"),
         ("25", "Lista objetiva de benefícios"),
         ("26", "Mensagens de impacto curtas"),
-        ("29", "Rotina simples (10 segundos)"),
     ],
     "TOFU HÍBRIDO — DESCOBERTA + PROVA": [
         ("10", "Primeira experiência emocional"),
         ("11", "Alívio rápido (nota 8 → 2)"),
         ("12", "Antes/depois simples"),
         ("18", "Público 45+ (sem medo, sem oferta)"),
+        ("29", "Rotina simples (10 segundos)"),
     ],
     "MOFU PURO — EDUCAÇÃO": [
         ("02", "Anti-inflamatório vs natural"),
@@ -865,7 +865,7 @@ Aqui você não organiza por “número do vídeo”. Organiza por <b>efeito men
         show_group(
             "🔁 TOFU HÍBRIDO — DESCOBERTA + PROVA",
             CREATIVES["TOFU HÍBRIDO — DESCOBERTA + PROVA"],
-            "Função mental: acelerar curiosos já impactados · Uso: RMK leve / públicos de vídeo"
+            "Função mental: descoberta qualificada + quebra leve de objeção · Uso: públicos de vídeo / segmentação 45+"
         )
 
     if stage_filter in ["Todos", "MOFU"]:
