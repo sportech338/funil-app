@@ -127,14 +127,14 @@ li { margin-bottom: 0.28rem; }
 # DADOS (CRIATIVOS)
 # ======================================================
 CREATIVES = {
-    "TOFU PURO — DESCOBERTA": [
+    "TOFU — DESCOBERTA": [
         ("07", "Apresentação simples do produto"),
         ("17", "Uso durante atividade"),
         ("24", "Rotina ativa"),
         ("25", "Lista objetiva de benefícios"),
         ("26", "Mensagens de impacto curtas"),
     ],
-    "TOFU HÍBRIDO — DESCOBERTA + PROVA": [
+    "TOFU — DESCOBERTA + PROVA": [
         ("10", "Primeira experiência emocional"),
         ("11", "Alívio rápido (nota 8 → 2)"),
         ("12", "Antes/depois simples"),
@@ -858,13 +858,13 @@ Aqui você não organiza por “número do vídeo”. Organiza por <b>efeito men
 
     if stage_filter in ["Todos", "TOFU"]:
         show_group(
-            "🔵 TOFU PURO — DESCOBERTA",
-            CREATIVES["TOFU PURO — DESCOBERTA"],
+            "🔵 TOFU — DESCOBERTA",
+            CREATIVES["TOFU — DESCOBERTA"],
             "Função mental: apresentar o produto sem exigir decisão · Uso: escalar orçamento"
         )
         show_group(
-            "🔁 TOFU HÍBRIDO — DESCOBERTA + PROVA",
-            CREATIVES["TOFU HÍBRIDO — DESCOBERTA + PROVA"],
+            "🔵 TOFU — DESCOBERTA + PROVA",
+            CREATIVES["TOFU — DESCOBERTA + PROVA"],
             "Função mental: descoberta qualificada + quebra leve de objeção · Uso: públicos de vídeo / segmentação 45+"
         )
 
