@@ -141,7 +141,7 @@ CREATIVES = {
         ("18", "Público 45+ (sem medo, sem oferta)"),
         ("29", "Rotina simples (10 segundos)"),
     ],
-    "MOFU PURO — EDUCAÇÃO": [
+    "MOFU — EDUCAÇÃO": [
         ("02", "Anti-inflamatório vs natural"),
         ("03", "Pesquisa + mecanismo + ingredientes"),
         ("04", "Dor crônica + terapia (sem desconto)"),
@@ -870,12 +870,12 @@ Aqui você não organiza por “número do vídeo”. Organiza por <b>efeito men
 
     if stage_filter in ["Todos", "MOFU"]:
         show_group(
-            "🟡 MOFU PURO — EDUCAÇÃO",
-            CREATIVES["MOFU PURO — EDUCAÇÃO"],
+            "🟡 MOFU — EDUCAÇÃO",
+            CREATIVES["MOFU — EDUCAÇÃO"],
             "Função mental: “ok, agora faz sentido” · Uso: escalar compreensão (não conversão)"
         )
         show_group(
-            "🟠 MOFU — VALIDAÇÃO",
+            "🟡 MOFU — VALIDAÇÃO",
             CREATIVES["MOFU — VALIDAÇÃO"],
             "Função mental: “funciona para pessoas como eu” · Uso: remarketing + públicos quentes"
         )
