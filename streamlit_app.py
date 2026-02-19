@@ -149,7 +149,7 @@ CREATIVES = {
         ("22", "Profissional em pé o dia todo"),
         ("28", "Passo a passo (sem pressão)"),
     ],
-    "MOFU — VALIDAÇÃO | PRÉ-DECISÃO": [
+    "MOFU — VALIDAÇÃO": [
         ("05", "Evolução em dias (sem urgência)"),
         ("06", "Antes/depois + segredo"),
         ("08", "Dor severa + alternativa à cirurgia"),
