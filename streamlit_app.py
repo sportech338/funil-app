@@ -130,22 +130,24 @@ CREATIVES = {
     "TOFU — DESCOBERTA": [
         ("07", "Apresentação simples do produto"),
         ("24", "Rotina ativa"),
-        ("25", "Lista objetiva de benefícios"),
         ("26", "Mensagens de impacto curtas"),
     ],
+
     "MOFU — EDUCACIONAL": [
         ("02", "Anti-inflamatório vs natural"),
         ("03", "Pesquisa + mecanismo + ingredientes"),
         ("04", "Dor crônica + terapia (sem desconto)"),
         ("16", "Comparação com joelheira"),
-        ("18", "Público 45+ (validação social)"),
         ("22", "Profissional em pé o dia todo"),
+        ("25", "Lista objetiva de benefícios"),
     ],
+
     "MOFU — VALIDAÇÃO": [
         ("05", "Evolução em dias (sem urgência)"),
         ("06", "Antes/depois + segredo"),
         ("08", "Dor severa + alternativa à cirurgia"),
         ("15", "Caso real + validação profissional"),
+        ("18", "Público 45+ (validação social)"),
         ("19", "Osso com osso + indicação técnica"),
         ("21", "Medicamentos vs adesivo"),
         ("10", "Primeira experiência emocional"),
@@ -154,6 +156,7 @@ CREATIVES = {
         ("17", "Uso durante atividade"),
         ("29", "Rotina simples (comparativo implícito)"),
     ],
+
     "BOFU — DECISÃO": [
         ("13", "Benefícios claros + oferta"),
         ("20", "Oferta direta + urgência"),
@@ -161,10 +164,12 @@ CREATIVES = {
         ("27", "Prova familiar + desconto"),
         ("28", "Passo a passo + desconto"),
     ],
+
     "BOFU — DECISÃO | NARRATIVA LONGA": [
         ("01", "História longa + médico + cirurgia"),
         ("09", "Dor extrema + testemunho + garantia"),
     ],
+
     "BOFU — PROVA SOCIAL": [
         ("UGC", "Cliente (Diego)"),
         ("UGC", "Cliente (Idosa)"),
