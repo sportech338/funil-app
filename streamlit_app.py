@@ -129,7 +129,6 @@ li { margin-bottom: 0.28rem; }
 CREATIVES = {
     "TOFU — DESCOBERTA": [
         ("07", "Apresentação simples do produto"),
-        ("17", "Uso durante atividade"),
         ("24", "Rotina ativa"),
         ("25", "Lista objetiva de benefícios"),
         ("26", "Mensagens de impacto curtas"),
@@ -139,6 +138,7 @@ CREATIVES = {
         ("03", "Pesquisa + mecanismo + ingredientes"),
         ("04", "Dor crônica + terapia (sem desconto)"),
         ("16", "Comparação com joelheira"),
+        ("18", "Público 45+ (validação social)"),
         ("22", "Profissional em pé o dia todo"),
     ],
     "MOFU — VALIDAÇÃO": [
@@ -151,7 +151,7 @@ CREATIVES = {
         ("10", "Primeira experiência emocional"),
         ("11", "Alívio rápido (nota 8 → 2)"),
         ("12", "Antes/depois simples"),
-        ("18", "Público 45+ (validação social)"),
+        ("17", "Uso durante atividade"),
         ("29", "Rotina simples (comparativo implícito)"),
     ],
     "BOFU — DECISÃO": [
