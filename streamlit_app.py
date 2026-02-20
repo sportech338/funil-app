@@ -134,20 +134,12 @@ CREATIVES = {
         ("25", "Lista objetiva de benefícios"),
         ("26", "Mensagens de impacto curtas"),
     ],
-    "TOFU — DESCOBERTA + PROVA": [
-        ("10", "Primeira experiência emocional"),
-        ("11", "Alívio rápido (nota 8 → 2)"),
-        ("12", "Antes/depois simples"),
-        ("18", "Público 45+ (sem medo, sem oferta)"),
-        ("29", "Rotina simples (10 segundos)"),
-    ],
     "MOFU — EDUCACIONAL": [
         ("02", "Anti-inflamatório vs natural"),
         ("03", "Pesquisa + mecanismo + ingredientes"),
         ("04", "Dor crônica + terapia (sem desconto)"),
         ("16", "Comparação com joelheira"),
         ("22", "Profissional em pé o dia todo"),
-        ("28", "Passo a passo (sem pressão)"),
     ],
     "MOFU — VALIDAÇÃO": [
         ("05", "Evolução em dias (sem urgência)"),
@@ -156,12 +148,18 @@ CREATIVES = {
         ("15", "Caso real + validação profissional"),
         ("19", "Osso com osso + indicação técnica"),
         ("21", "Medicamentos vs adesivo"),
+        ("10", "Primeira experiência emocional"),
+        ("11", "Alívio rápido (nota 8 → 2)"),
+        ("12", "Antes/depois simples"),
+        ("18", "Público 45+ (validação social)"),
+        ("29", "Rotina simples (comparativo implícito)"),
     ],
     "BOFU — DECISÃO": [
         ("13", "Benefícios claros + oferta"),
         ("20", "Oferta direta + urgência"),
         ("23", "Rotina 2 passos + desconto"),
         ("27", "Prova familiar + desconto"),
+        ("28", "Passo a passo + desconto"),
     ],
     "BOFU — DECISÃO | NARRATIVA LONGA": [
         ("01", "História longa + médico + cirurgia"),
@@ -862,12 +860,6 @@ Aqui você não organiza por “número do vídeo”. Organiza por <b>efeito men
             CREATIVES["TOFU — DESCOBERTA"],
             "Função mental: apresentar o produto sem exigir decisão · Uso: escalar orçamento"
         )
-        show_group(
-            "🔵 TOFU — DESCOBERTA + PROVA",
-            CREATIVES["TOFU — DESCOBERTA + PROVA"],
-            "Função mental: descoberta qualificada + quebra leve de objeção · Uso: públicos de vídeo / segmentação 45+"
-        )
-
     if stage_filter in ["Todos", "MOFU"]:
         show_group(
             "🟡 MOFU — EDUCACIONAL",
