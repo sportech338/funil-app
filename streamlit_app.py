@@ -153,6 +153,7 @@ CREATIVES = {
         ("10", "Primeira experiência emocional"),
         ("11", "Alívio rápido (nota 8 → 2)"),
         ("12", "Antes/depois simples"),
+        ("14", "Redução 9 → 2 em 14 dias"),
         ("17", "Uso durante atividade"),
         ("29", "Rotina simples (comparativo implícito)"),
     ],
