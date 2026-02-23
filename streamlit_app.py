@@ -143,8 +143,10 @@ CREATIVES = {
     ],
 
     "MOFU — VALIDAÇÃO": [
+        ("01", "História longa + médico + cirurgia"),
         ("05", "Evolução em dias (sem urgência)"),
         ("06", "Antes/depois + segredo"),
+        ("09", "Dor extrema + testemunho + garantia"),
         ("08", "Dor severa + alternativa à cirurgia"),
         ("15", "Caso real + validação profissional"),
         ("18", "Público 45+ (validação social)"),
@@ -164,11 +166,6 @@ CREATIVES = {
         ("23", "Rotina 2 passos + desconto"),
         ("27", "Prova familiar + desconto"),
         ("28", "Passo a passo + desconto"),
-    ],
-
-    "BOFU — DECISÃO | NARRATIVA LONGA": [
-        ("01", "História longa + médico + cirurgia"),
-        ("09", "Dor extrema + testemunho + garantia"),
     ],
 
     "BOFU — PROVA SOCIAL": [
@@ -883,11 +880,6 @@ Aqui você não organiza por “número do vídeo”. Organiza por <b>efeito men
             "🔴 BOFU — DECISÃO",
             CREATIVES["BOFU — DECISÃO"],
             "Função mental: facilitar a decisão agora · Uso: conversão direta"
-        )
-        show_group(
-            "🔴 BOFU — NARRATIVA LONGA",
-            CREATIVES["BOFU — DECISÃO | NARRATIVA LONGA"],
-            "Função mental: remover último freio emocional · Uso: RMK profundo (frequência baixa)"
         )
         show_group(
             "🧠 BOFU — PROVA SOCIAL",
