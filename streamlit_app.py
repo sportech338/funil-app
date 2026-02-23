@@ -466,6 +466,11 @@ Gerar curiosidade sem exigir decisão.
 
 <hr>
 
+<b>Função financeira:</b><br>
+Manter CPM saudável e gerar público qualificado para remarketing.
+
+<hr>
+
 <span class="highlight">
 Produto aparece como parte da rotina, não como argumento de venda.
 </span>
@@ -588,6 +593,11 @@ Organizar o raciocínio e reduzir ceticismo.
 
 <b>CTA:</b> Entenda como funciona<br>
 <b>Métricas:</b> 50–75% vídeo · CTR · Tempo médio
+
+<hr>
+
+<b>Função financeira:</b><br>
+Reduzir CPA futuro organizando a decisão antes da oferta.
 
 <hr>
 
@@ -727,6 +737,11 @@ Dar segurança e facilitar a decisão.
 
 <b>CTA:</b> Comprar agora / Garantir o seu<br>
 <b>Métricas:</b> CPA · ROAS · Taxa de conversão
+
+<hr>
+
+<b>Função financeira:</b><br>
+Converter público já preparado com máxima eficiência de ROAS.
 
 <hr>
 
@@ -967,3 +982,20 @@ elif section == "🩺 Diagnóstico":
 <span class="highlight">Criativo ruim drena o funil inteiro.</span>
 </div>
 """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="card">
+    <div class="title">📈 Diagnóstico de Escala</div>
+
+    <ul>
+    <li><b>CPM estável + TOFU forte?</b> → Pode escalar orçamento.</li>
+    <li><b>CTR ok mas BOFU caro?</b> → Reforçar MOFU.</li>
+    <li><b>BOFU estável e consistente?</b> → Escalar remarketing.</li>
+    <li><b>CPA instável?</b> → Revisar progressão mental do funil.</li>
+    </ul>
+
+    <span class="highlight">
+    Escala só é segura quando o processo mental está alinhado.
+    </span>
+    </div>
+    """, unsafe_allow_html=True)
