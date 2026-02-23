@@ -133,31 +133,32 @@ CREATIVES = {
         ("26", "Mensagens de impacto curtas"),
     ],
 
-    "MOFU — EDUCACIONAL": [
+    "MOFU — LÓGICA": [
         ("02", "Anti-inflamatório vs natural"),
         ("03", "Pesquisa + mecanismo + ingredientes"),
-        ("04", "Dor crônica + terapia (sem desconto)"),
         ("16", "Comparação com joelheira"),
-        ("22", "Profissional em pé o dia todo"),
+        ("21", "Medicamentos vs adesivo"),
         ("25", "Lista objetiva de benefícios"),
     ],
 
-    "MOFU — VALIDAÇÃO": [
+    "MOFU — CONFIANÇA": [
         ("01", "História longa + médico + cirurgia"),
         ("05", "Evolução em dias (sem urgência)"),
         ("06", "Antes/depois + segredo"),
-        ("09", "Dor extrema + testemunho + garantia"),
-        ("08", "Dor severa + alternativa à cirurgia"),
-        ("15", "Caso real + validação profissional"),
-        ("18", "Público 45+ (validação social)"),
-        ("19", "Osso com osso + indicação técnica"),
-        ("21", "Medicamentos vs adesivo"),
         ("10", "Primeira experiência emocional"),
         ("11", "Alívio rápido (nota 8 → 2)"),
         ("12", "Antes/depois simples"),
         ("14", "Redução 9 → 2 em 14 dias"),
         ("17", "Uso durante atividade"),
         ("29", "Rotina simples (comparativo implícito)"),
+    ],
+
+    "MOFU — TRANSIÇÃO": [
+        ("08", "Dor severa + alternativa à cirurgia"),
+        ("09", "Dor extrema + testemunho + garantia"),
+        ("15", "Caso real + validação profissional"),
+        ("18", "Público 45+ (validação social)"),
+        ("19", "Osso com osso + indicação técnica"),
     ],
 
     "BOFU — DECISÃO": [
@@ -186,7 +187,7 @@ section = st.sidebar.radio(
         "🔵 TOFU",
         "🟡 MOFU",
         "🔴 BOFU",
-        "🎥 Criativos (31)",
+        "🎥 Biblioteca de Criativos",
         "🩺 Diagnóstico",
     ]
 )
@@ -579,7 +580,7 @@ elif section == "🟡 MOFU":
     # ---------- RESUMO FIXO (sempre visível) ----------
     st.markdown("""
 <div class="card mofu">
-<div class="title">🟡 MOFU — Educação & Justificação</div>
+<div class="title">🟡 MOFU — Organização Mental</div>
 
 <b>Âncora mental:</b><br>
 “Ok… isso pode funcionar. Mas será que funciona pra mim?”
@@ -860,9 +861,9 @@ Se o BOFU estiver caro, o problema está antes.
 """, unsafe_allow_html=True)
 
 # ======================================================
-# 🎥 CRIATIVOS (31)
+# 🎥 BIBLIOTECA DE CRIATIVOS
 # ======================================================
-elif section == "🎥 Criativos (31)":
+elif section == "🎥 Biblioteca de Criativos":
     st.markdown("""
 <div class="card">
 <div class="title">🎥 Biblioteca de criativos por função mental</div>
@@ -897,14 +898,21 @@ Aqui você não organiza por “número do vídeo”. Organiza por <b>efeito men
         )
     if stage_filter in ["Todos", "MOFU"]:
         show_group(
-            "🟡 MOFU — EDUCACIONAL",
-            CREATIVES["MOFU — EDUCACIONAL"],
-            "Função mental: “ok, agora faz sentido” · Uso: escalar compreensão (não conversão)"
+            "🟡 MOFU — LÓGICA",
+            CREATIVES["MOFU — LÓGICA"],
+            "Função mental: organizar raciocínio · Uso: reduzir ceticismo técnico"
         )
+
         show_group(
-            "🟡 MOFU — VALIDAÇÃO",
-            CREATIVES["MOFU — VALIDAÇÃO"],
-            "Função mental: “funciona para pessoas como eu” · Uso: remarketing + públicos quentes"
+            "🟡 MOFU — CONFIANÇA",
+            CREATIVES["MOFU — CONFIANÇA"],
+            "Função mental: reduzir risco emocional · Uso: aquecer público"
+        )
+
+        show_group(
+            "🟠 MOFU — TRANSIÇÃO",
+            CREATIVES["MOFU — TRANSIÇÃO"],
+            "Função mental: preparar decisão · Uso: ponte para BOFU"
         )
 
     if stage_filter in ["Todos", "BOFU"]:
