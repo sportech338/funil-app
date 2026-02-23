@@ -386,7 +386,10 @@ elif section == "📘 Fundamentos":
       <li>Dor aparece mais que solução</li>
       <li>CTA: “Saiba mais”</li>
     </ul>
-    <p class="muted">Falhou em 1 item → não é TOFU.</p>
+    <p class="muted">
+    Falhou em 1 item → provavelmente não é TOFU puro.
+    Pode ser TOFU híbrido (com leve viés de venda).
+    </p>
   </div>
   <div class="kpi mofu">
     <h4>🟡 MOFU — só é MOFU se:</h4>
@@ -422,6 +425,19 @@ elif section == "📘 Fundamentos":
 <li><b>Uso correto:</b> PageView + vídeo/engajamento</li>
 </ul>
 <span class="highlight">PageView prepara. BOFU confirma.</span>
+</div>
+""", unsafe_allow_html=True)
+
+    # 🔥 AGORA CORRETAMENTE DENTRO DO BLOCO
+    st.markdown("""
+<div class="card">
+<div class="title">⚠️ Observação estratégica</div>
+<div class="muted">
+Produtos de dor geram muitos criativos híbridos.
+Classifique pelo efeito predominante no público,
+não pela regra rígida do checklist.
+O algoritmo responde ao comportamento, não à teoria.
+</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -576,7 +592,8 @@ Organizar o raciocínio e reduzir ceticismo.
 <hr>
 
 <span class="highlight">
-MOFU não vende. MOFU faz sentido.
+MOFU não força decisão. MOFU reduz risco mental.
+Pode converter naturalmente.
 </span>
 </div>
 """, unsafe_allow_html=True)
@@ -714,7 +731,7 @@ Dar segurança e facilitar a decisão.
 <hr>
 
 <span class="highlight">
-BOFU não convence. Ele confirma.
+BOFU não educa. Ele remove o último risco mental.
 </span>
 </div>
 """, unsafe_allow_html=True)
