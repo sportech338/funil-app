@@ -731,7 +731,7 @@ Dar segurança e facilitar a decisão.
 <hr>
 
 <span class="highlight">
-BOFU não educa. Ele remove o último risco mental.
+BOFU não educa. Ele remove o último risco percebido.
 </span>
 </div>
 """, unsafe_allow_html=True)
@@ -750,7 +750,7 @@ BOFU não educa. Ele remove o último risco mental.
 <div class="card">
 <b>O que é:</b><br>
 BOFU não é persuasão.<br>
-BOFU remove o último freio mental.
+BOFU remove o último risco percebido.
 
 <hr>
 
