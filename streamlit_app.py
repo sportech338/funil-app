@@ -931,10 +931,13 @@ Aqui você não organiza por “número do vídeo”. Organiza por <b>efeito men
 # 🩺 DIAGNÓSTICO
 # ======================================================
 elif section == "🩺 Diagnóstico":
+
     st.markdown("""
 <div class="card">
-<div class="title">🩺 Diagnóstico (rápido e útil)</div>
-<div class="muted">Marque o sintoma. O app aponta o lugar provável do erro.</div>
+<div class="title">🩺 Diagnóstico Inteligente</div>
+<div class="muted">
+Marque os sintomas. O sistema calcula onde o funil está fraco.
+</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -947,34 +950,101 @@ elif section == "🩺 Diagnóstico":
         s3 = st.checkbox("CTR ok, mas a pessoa não evolui no funil")
         s4 = st.checkbox("BOFU caro (CPA alto) e você sente que precisa explicar muito")
 
+    # =============================
+    # 🎯 SCORE AUTOMÁTICO
+    # =============================
+
+    score = {
+        "TOFU": 10,
+        "MOFU": 10,
+        "BOFU": 10
+    }
+
+    if s1:
+        score["TOFU"] -= 2
+
+    if s2:
+        score["TOFU"] -= 2
+
+    if s3:
+        score["MOFU"] -= 3
+
+    if s4:
+        score["MOFU"] -= 2
+        score["BOFU"] -= 2
+
+    # =============================
+    # 🔎 LEITURA PROVÁVEL
+    # =============================
+
     with colB:
         st.markdown("### Leitura provável")
+
         if s1 or s2:
-            st.error("🔵 Provável TOFU errado: você está pedindo esforço cedo ou mostrando demais/menos.")
+            st.error("🔵 Provável TOFU fraco: você está pedindo esforço cedo ou mostrando demais/menos.")
+
         if s3:
-            st.warning("🟡 Provável MOFU fraco: falta lógica/mecanismo/justificativa.")
+            st.warning("🟡 Provável MOFU fraco: falta lógica, mecanismo ou justificativa.")
+
         if s4:
-            st.error("🔴 BOFU está pagando a conta do que faltou antes (preparação mental).")
+            st.error("🔴 BOFU está pagando a conta do que faltou antes.")
+
         if not (s1 or s2 or s3 or s4):
-            st.success("✅ Sem sintomas marcados. Use a régua de consciência para auditar criativos.")
+            st.success("✅ Nenhum sintoma crítico marcado.")
+
+    # =============================
+    # 📊 SCORE VISUAL
+    # =============================
+
+    st.markdown("### 📊 Score do Funil")
+
+    def barra(valor):
+        cheio = "█" * valor
+        vazio = "░" * (10 - valor)
+        return cheio + vazio
+
+    st.write(f"🔵 TOFU  {barra(score['TOFU'])}  ({score['TOFU']}/10)")
+    st.write(f"🟡 MOFU  {barra(score['MOFU'])}  ({score['MOFU']}/10)")
+    st.write(f"🔴 BOFU  {barra(score['BOFU'])}  ({score['BOFU']}/10)")
+
+    # =============================
+    # 🧠 INTERPRETAÇÃO AUTOMÁTICA
+    # =============================
+
+    menor_etapa = min(score, key=score.get)
+
+    st.markdown("### 🧠 Gargalo principal")
+
+    if menor_etapa == "TOFU":
+        st.error("Seu gargalo principal está no TOFU. Revise criativos de descoberta e atenção.")
+
+    elif menor_etapa == "MOFU":
+        st.warning("Seu gargalo principal está no MOFU. Falta organização mental e redução de risco.")
+
+    elif menor_etapa == "BOFU":
+        st.error("Seu gargalo principal está no BOFU. Revise prova social, oferta e redução de risco final.")
+
+    # =============================
+    # 🪓 CRITÉRIOS DE CORTE
+    # =============================
 
     st.markdown("""
 <div class="card">
-<div class="title">🪓 Critérios de corte por etapa (simples)</div>
+<div class="title">🪓 Critérios de corte por etapa</div>
 
 <b>🔵 TOFU — cortar se:</b>
 <ul>
 <li>CPM sobe continuamente</li>
-<li>ThruPlay / 50% vídeo abaixo da média do conjunto</li>
+<li>ThruPlay / 50% vídeo abaixo da média</li>
 </ul>
 
 <hr>
 
 <b>🟡 MOFU — cortar se:</b>
 <ul>
-<li>50%–75% de vídeo baixo</li>
+<li>50–75% vídeo baixo</li>
 <li>Tempo médio fraco</li>
-<li>CTR não melhora com frequência baixa</li>
+<li>CTR não evolui</li>
 </ul>
 
 <hr>
@@ -982,7 +1052,7 @@ elif section == "🩺 Diagnóstico":
 <b>🔴 BOFU — cortar se:</b>
 <ul>
 <li>CPA acima do limite por vários dias</li>
-<li>ROAS instável com frequência alta</li>
+<li>ROAS instável</li>
 <li>Conversões concentradas em poucos dias</li>
 </ul>
 
@@ -991,19 +1061,23 @@ elif section == "🩺 Diagnóstico":
 </div>
 """, unsafe_allow_html=True)
 
+    # =============================
+    # 📈 DIAGNÓSTICO DE ESCALA
+    # =============================
+
     st.markdown("""
-    <div class="card">
-    <div class="title">📈 Diagnóstico de Escala</div>
+<div class="card">
+<div class="title">📈 Diagnóstico de Escala</div>
 
-    <ul>
-    <li><b>CPM estável + TOFU forte?</b> → Pode escalar orçamento.</li>
-    <li><b>CTR ok mas BOFU caro?</b> → Reforçar MOFU.</li>
-    <li><b>BOFU estável e consistente?</b> → Escalar remarketing.</li>
-    <li><b>CPA instável?</b> → Revisar progressão mental do funil.</li>
-    </ul>
+<ul>
+<li><b>CPM estável + TOFU forte?</b> → Pode escalar orçamento.</li>
+<li><b>CTR ok mas BOFU caro?</b> → Reforçar MOFU.</li>
+<li><b>BOFU consistente?</b> → Escalar remarketing.</li>
+<li><b>CPA instável?</b> → Revisar progressão mental.</li>
+</ul>
 
-    <span class="highlight">
-    Escala só é segura quando o processo mental está alinhado.
-    </span>
-    </div>
-    """, unsafe_allow_html=True)
+<span class="highlight">
+Escala segura depende de progressão mental alinhada.
+</span>
+</div>
+""", unsafe_allow_html=True)
